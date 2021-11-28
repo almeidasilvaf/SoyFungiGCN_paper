@@ -1,0 +1,300 @@
+---
+title: "Preprocessing GWAS-derived data"
+author: "Fabricio Almeida-Silva"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=TRUE,
+                      warning=FALSE, 
+                      message=FALSE,
+                      tidy.opts=list(width.cutoff=60),
+                      tidy=TRUE)
+```
+
+## Data and goal
+
+Here, we will use information from the VCF file on our pest resistance-related SNPs to predict the effect of variants in genes.
+
+
+## Creating a table of favorable and unfavorable alleles for each trait
+
+Here, we will add random positive and negative values for SNP effects. We are only concerned with the sign of the effect, not with its size.
+
+```{r create_table}
+library(ggplot2)
+library(here)
+library(GenomicRanges)
+library(GenomeInfoDb)
+library(tidyverse)
+
+# Load SNP ranges
+load(here("products", "result_files", "snp_granges.rda"))
+
+# Get DOI of studies for each species
+sapply(snp_grangeslist, function(x) unique(x$DOI))
+
+#----A. glycines----------------------------------------------------------------
+# Study 1: 10.3835/plantgenome2018.02.0011
+# All allele effects are positive (see Table 3 of the paper)
+dfbydoi <- function(doi = NULL, species = NULL) {
+    df <- snp_grangeslist[[species]]
+    df <- as.data.frame(df[df$DOI == doi, ])
+    return(df)
+}
+
+agl1 <- dfbydoi(doi = "10.3835/plantgenome2018.02.0011", species = "Aglycines")
+agl1 <- data.frame(SNP = agl1$SNP, Effect = 0.01)
+
+# Study 2: 10.3389/fpls.2017.00670
+# All allele effects are positive
+agl2 <- dfbydoi(doi = "10.3389/fpls.2017.00670", species = "Aglycines")
+agl2 <- data.frame(SNP = agl2$SNP, Effect = 0.01)
+
+# Study 3: 10.1093/jee/toz017
+# All allele effects are positive
+agl3 <- dfbydoi(doi = "10.1093/jee/toz017", species = "Aglycines")
+agl3 <- data.frame(SNP = agl3$SNP, Effect = 0.01)
+
+# Combining all data frames for A. glycines
+aglycines_effect <- rbind(agl1, agl2, agl3)
+write_tsv(aglycines_effect, 
+          file = here("products", "tables", "aglycines_snps_and_effects.txt"))
+
+#----S. litura------------------------------------------------------------------
+# Study: 10.1007/s10681-016-1631-4
+# All allele effects are positive
+slitura_effect <- dfbydoi(doi = "10.1007/s10681-016-1631-4", species = "Slitura")
+
+# Get SNP IDs based on positions
+soysnp50k <- read.csv(here("data", "snp_positions_a2.v1.txt"), sep="\t")
+sli_positions <- data.frame(
+    X.CHROM = slitura_effect$seqnames,
+    POS = slitura_effect$start
+)
+sli_positions_id <- merge(sli_positions, soysnp50k, by = c("X.CHROM", "POS"))
+# None of the identified SNPs have corresponding ID in SoySNP50k
+slitura_effect <- data.frame(SNP = slitura_effect$SNP, Effect = 0.01)
+
+# Calculate distance from the identified SNP to the closest SNP in SoySNP50k
+# Chr12: 3,580,847
+get_closest_snp <- function(snp_positions) {
+    pos_list <- split(snp_positions, snp_positions[,1])
+    dist <- lapply(seq_len(nrow(snp_positions)), function(x) {
+        df_chr <- soysnp50k[soysnp50k[,1] == snp_positions[x, 1], ]
+        pos <- snp_positions[x, 2]
+        d <- min(abs(df_chr[,2] - pos))
+        return(d)
+    })
+    return(dist)
+}
+get_closest_snp(sli_positions)
+
+# As the closest SNPs are > 1kb distant, we can confidently say that these SNPs
+# do not have a corresponding SNP in SoySNP50k
+
+#----Heterodera glycines--------------------------------------------------------
+# Study: 10.3835/plantgenome2013.11.0039
+hgl1 <- dfbydoi(doi = "10.3835/plantgenome2013.11.0039", "Hglycines")
+hgl1 <- data.frame(SNP = hgl1$SNP, Effect = 0.01)
+
+# Study: 10.1186/s12864-015-1811-y
+hgl2 <- dfbydoi(doi = "10.1186/s12864-015-1811-y", "Hglycines")
+hgl2 <- data.frame(SNP = hgl2$SNP, Effect = 0.01)
+
+# Study: 10.1007/s11032-017-0665-1
+hgl3 <- dfbydoi(doi = "10.1007/s11032-017-0665-1", "Hglycines")
+hgl3 <- data.frame(SNP = hgl3$SNP, Effect = 0.01)
+
+# Study: 10.1007/s00122-019-03381-6
+hgl4 <- dfbydoi(doi = "10.1007/s00122-019-03381-6", "Hglycines")
+hgl4 <- data.frame(SNP = hgl4$SNP, Effect = 0.01)
+
+# Study: 10.1186/s12864-017-3843-y
+hgl5 <- dfbydoi(doi = "10.1186/s12864-017-3843-y", "Hglycines")
+hgl5 <- data.frame(SNP = hgl5$SNP, Effect = 0.01)
+
+# Study: 10.3389/fpls.2019.00401
+hgl6 <- dfbydoi(doi = "10.3389/fpls.2019.00401", "Hglycines")
+hgl6 <- data.frame(SNP = hgl6$SNP, Effect = 0.01)
+
+# Study: 10.1094/PHYTO-01-16-0042-FI
+hgl7 <- dfbydoi(doi = "10.1094/PHYTO-01-16-0042-FI", "Hglycines")
+hgl7 <- data.frame(SNP = hgl7$SNP, Effect = 0.01)
+
+hgl_unknown <- rbind(
+    dfbydoi(doi = "10.3835/plantgenome2013.11.0039", "Hglycines"),
+    dfbydoi(doi = "10.1186/s12864-015-1811-y", "Hglycines"),
+    dfbydoi(doi = "10.1007/s11032-017-0665-1", "Hglycines"),
+    dfbydoi(doi = "10.1007/s00122-019-03381-6", "Hglycines"),
+    dfbydoi(doi = "10.1186/s12864-017-3843-y", "Hglycines"),
+    dfbydoi(doi = "10.3389/fpls.2019.00401", "Hglycines"),
+    dfbydoi(doi = "10.1094/PHYTO-01-16-0042-FI", "Hglycines")
+)
+hgl_unknown <- hgl_unknown[startsWith(hgl_unknown$SNP, "Chr"), ]
+
+hgl_positions <- data.frame(
+    X.CHROM = hgl_unknown$seqnames,
+    POS = hgl_unknown$start
+)
+
+distance <- get_closest_snp(hgl_positions)
+
+# Add SNP IDs where possible
+hgl_wo_ids <- merge(soysnp50k, hgl_unknown, by.x = "POS", by.y = "start")[, "ID", drop=FALSE]
+names(hgl_wo_ids)[1] <- "SNP" 
+hgl_wo_ids$Effect <- 0.01
+
+hgl_w_ids <- rbind(hgl1, hgl2, hgl3, hgl4, hgl5, hgl6, hgl7)
+hgl_w_ids <- hgl_w_ids[startsWith(hgl_w_ids$SNP, "ss"), ]
+
+hglycines_effect <- rbind(hgl_wo_ids, hgl_w_ids)
+
+write_tsv(hglycines_effect, 
+          file = here("products", "tables", "hglycines_snps_and_effects.txt"))
+```
+
+Now, we can combining all SNPs and effects for each trait.
+
+```{r combine_snps_and_effects}
+snps_and_effects <- rbind(aglycines_effect, slitura_effect, hglycines_effect)
+snps_and_effects$Species <- c(
+    rep("Aglycines", nrow(aglycines_effect)),
+    rep("Slitura", nrow(slitura_effect)),
+    rep("Hglycines", nrow(hglycines_effect))
+)
+write_tsv(snps_and_effects,
+          file=here("products", "result_files", "snps_and_effects.txt"))
+```
+
+```{bash eval=FALSE}
+bash get_filtered_vcf.sh
+```
+
+## Locate variants and predict their effects
+
+```{r}
+# Load filtered VCF
+filt_vcf <- read.table(
+  here("products", "result_files", "filtered_soysnp50k_final.txt"),
+  header=TRUE, comment.char=""
+)
+filt_vcf <- filt_vcf[!duplicated(filt_vcf$ID), 1:5]
+
+# Load data frame of SNPs in genes
+snps_genes <- read_tsv(
+  here("products", "result_files", "snps_and_location.tsv")
+) %>%
+  filter(Location != "Intergenic") %>%
+  arrange(Species, SNPs)
+  
+# Get VCF-like data frame of SNPs in genes
+vcf_genes <- filt_vcf[filt_vcf$ID %in% snps_genes$SNPs, ]
+
+snp_df <- as.data.frame(snp_granges)[, c("SNP", "DOI")]
+vcf_genes2 <- snps_genes[!startsWith(snps_genes$SNPs, "ss"), ]
+vcf_genes2 <- merge(vcf_genes2, snp_df, by.y = "SNP", by.x = "SNPs")
+
+vcf_genes2 <- data.frame(
+  X.CHROM = sapply(strsplit(vcf_genes2$SNPs, "-"), `[`, 1),
+  POS = sapply(strsplit(vcf_genes2$SNPs, "-"), `[`, 2),
+  ID = paste0("SNP_", 1:nrow(vcf_genes2)),
+  REF = NA, 
+  ALT = NA,
+  DOI = vcf_genes2$DOI
+) %>%
+  mutate(X.CHROM = str_replace_all(X.CHROM,
+                                   c("Chr1$" = "Chr01",
+                                     "Chr2$" = "Chr02",
+                                     "Chr3" = "Chr03",
+                                     "Chr4" = "Chr04",
+                                     "Chr5" = "Chr05",
+                                     "Chr6" = "Chr06",
+                                     "Chr7" = "Chr07",
+                                     "Chr8" = "Chr08",
+                                     "Chr9" = "Chr09"
+                                     )
+                                   )
+         ) %>%
+  arrange(DOI, X.CHROM, POS) %>%
+  filter(DOI != "10.1186/s12864-015-1811-y") # does not include reference and alternate allele
+vcf_genes2 <- vcf_genes2[!duplicated(vcf_genes2$POS), ]
+
+vcf_genes2$REF <- c(
+  "T", "AG", "A", "AATAG", "A", "CATTA", "G", "T", "A", "C", "G",
+  "T", "T", "T", "A", "T", "T", "G",
+  "A", "A", "C", "G",
+  "C", "C", "A"
+)
+
+vcf_genes2$ALT <- c(
+  "C", "A", "G", "A", "C", "CATTAA", "GC", "C", "T", "A", "T",
+  "C", "C", "C", "G", "C", "G", "A",
+  "C", "G", "G", "T",
+  "G", "G", "G"
+)
+
+# Combine positions for known (ss.*) and unknown (only coordinates) variants
+vcf_genes_final <- rbind(vcf_genes, 
+                         vcf_genes2[, 1:5])
+```
+
+```{r}
+# Convert VCF to GRanges
+library(GenomicRanges)
+library(Biostrings)
+library(VariantAnnotation)
+options(timeout = 6000)
+gff <- rtracklayer::import("ftp://ftp.psb.ugent.be/pub/plaza/plaza_public_dicots_04/GFF/gma/annotation.all_transcripts.all_features.gma.gff3.gz")
+genome <- Biostrings::readDNAStringSet("ftp://ftp.psb.ugent.be/pub/plaza/plaza_public_dicots_04/Genomes/gma.con.gz")
+txdb <- GenomicFeatures::makeTxDbFromGRanges(gff)
+
+ranges <- data.frame(
+  seqnames = vcf_genes_final$X.CHROM,
+  start = vcf_genes_final$POS,
+  end = vcf_genes_final$POS,
+  ID = vcf_genes_final$ID,
+  REF = vcf_genes_final$REF,
+  ALT = vcf_genes_final$ALT
+)
+
+vcf_granges <- makeGRangesFromDataFrame(ranges)
+vcf_granges$ID <- vcf_genes_final$ID
+vcf_granges$REF <- vcf_genes_final$REF
+vcf_granges$ALT <- vcf_genes_final$ALT
+
+# Locate variants
+loc <- locateVariants(vcf_granges, txdb, AllVariants())
+table(loc$LOCATION)
+
+# Predict coding changes
+effect <- predictCoding(vcf_granges, txdb, genome, DNAStringSet(ranges$ALT))
+table(effect$CONSEQUENCE)
+
+# Create a data frame of effects
+eff_df <- as.data.frame(effect)
+eff_df <- merge(eff_df, snps_genes[, c(1,3)], all.x = TRUE,
+                by.x = "ID", by.y = "SNPs")
+eff_df2 <- eff_df %>%
+  distinct(ID, .keep_all = TRUE) %>%
+  mutate(Species = if_else(is.na(Species), "Hglycines", "Aglycines"))
+
+eff_df2 %>%
+  filter(CONSEQUENCE != "frameshift") %>%
+  dplyr::count(Species, CONSEQUENCE) %>%
+  group_by(Species) %>%
+  mutate(percentage = n / sum(n))
+
+write_tsv(eff_df2,
+          file = here("products", "tables", "variant_effect_predictions.tsv")
+          )
+```
+
+## Session information
+
+This document was created under the following conditions:
+
+```{r}
+sessionInfo()
+```

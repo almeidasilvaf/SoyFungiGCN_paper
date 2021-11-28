@@ -1,0 +1,195 @@
+Gene	description_type	description	species
+Glyma.01G002400	description	K01047 - secretory phospholipase A2 (PLA2G, SPLA2)	Hglycines
+Glyma.01G016800	description	KOG3140 - Predicted membrane protein	Hglycines
+Glyma.01G020300	description	3.4.24.70 - Oligopeptidase A	Hglycines
+Glyma.01G026700	description	2.3.2.2//2.6.1.2//2.6.1.4//2.6.1.44 - Gamma-glutamyltransferase / Glutamyl transpeptidase // Alanine transaminase / Glutamic--pyruvic transaminase // Glycine transaminase / Glycine aminotransferase // Alanine--glyoxylate transaminase / Alanine--glyoxylate aminotransferase	Hglycines
+Glyma.01G028700	description	PTHR27001:SF49 - PROTEIN NSP-INTERACTING KINASE 3	Hglycines
+Glyma.01G077400	description	K05285 - phosphatidylinositol glycan, class N (PIGN)	Hglycines
+Glyma.01G157900	description	PTHR18966//PTHR18966:SF245 - IONOTROPIC GLUTAMATE RECEPTOR // SUBFAMILY NOT NAMED	Hglycines
+Glyma.01G161200	description	PTHR11106//PTHR11106:SF58 - GANGLIOSIDE INDUCED DIFFERENTIATION ASSOCIATED PROTEIN 2-RELATED // SUBFAMILY NOT NAMED	Hglycines
+Glyma.01G179900	description	PTHR11850//PTHR11850:SF103 - HOMEOBOX PROTEIN TRANSCRIPTION FACTORS // SUBFAMILY NOT NAMED	Hglycines
+Glyma.01G200200	description	PTHR11817:SF26 - PLASTIDIAL PYRUVATE KINASE 3, CHLOROPLASTIC	Hglycines
+Glyma.01G204800	description	PTHR31692:SF10 - EXPANSIN-LIKE B1	Hglycines
+Glyma.01G207300	description	PTHR24326//PTHR24326:SF140 - FAMILY NOT NAMED // HOMEOBOX-LEUCINE ZIPPER PROTEIN HAT1-RELATED	Hglycines
+Glyma.02G000700	description	PF14576//PF14577 - Sieve element occlusion N-terminus (SEO_N) // Sieve element occlusion C-terminus (SEO_C)	Hglycines
+Glyma.02G005800	description	PTHR24064:SF297 - INORGANIC PHOSPHATE TRANSPORTER 1-1-RELATED	Hglycines
+Glyma.02G009100	description	PTHR13832//PTHR13832:SF165 - PROTEIN PHOSPHATASE 2C // PROTEIN PHOSPHATASE 2C 13-RELATED	Hglycines
+Glyma.02G019100	description	PTHR24326:SF176 - HOMEOBOX-LEUCINE ZIPPER PROTEIN ATHB-13-RELATED	Hglycines
+Glyma.02G027800	description	3.4.24.12 - Envelysin / Sea-urchin-hatching proteinase	Hglycines
+Glyma.02G125100	description	1.14.11.31 - Thebaine 6-O-demethylase	Hglycines
+Glyma.02G132100	description	1.7.7.1 - Ferredoxin--nitrite reductase	Hglycines
+Glyma.02G133200	description	PF04749 - PLAC8 family (PLAC8)	Hglycines
+Glyma.02G134600	description	PTHR24349//PTHR24349:SF115 - SERINE/THREONINE-PROTEIN KINASE // SUBFAMILY NOT NAMED	Hglycines
+Glyma.02G140900	description	K11275 - histone H1/5 (H1_5)	Hglycines
+Glyma.02G143100	description	PF04720 - PDDEXK-like family of unknown function (PDDEXK_6)	Hglycines
+Glyma.03G194000	description	PTHR10634 - AN1-TYPE ZINC FINGER PROTEIN	Hglycines
+Glyma.04G013500	description	PF03181 - BURP domain (BURP)	Hglycines
+Glyma.04G017500	description	1.11.1.21 - Catalase peroxidase	Hglycines
+Glyma.04G027800	description	PTHR31218:SF53 - PROTEIN WALLS ARE THIN 1	Hglycines
+Glyma.04G028500	description	PTHR10438//PTHR10438:SF293 - THIOREDOXIN // SUBFAMILY NOT NAMED	Hglycines
+Glyma.04G076300	description	K00306 - sarcosine oxidase / L-pipecolate oxidase (PIPOX)	Hglycines
+Glyma.04G080300	description	PTHR14255//PTHR14255:SF1 - ATP-DEPENDENT PROTEASE  CEREBLON // SUBFAMILY NOT NAMED	Hglycines
+Glyma.04G089700	description	4.1.1.32//4.1.1.49 - Phosphoenolpyruvate carboxykinase (GTP) / Phosphopyruvate carboxylase // Phosphoenolpyruvate carboxykinase (ATP) / Phosphopyruvate carboxylase	Hglycines
+Glyma.06G109200	description	1.7.1.1//1.7.99.4 - Nitrate reductase (NADH) / Nitrate reductase (NADH(2)) // Nitrate reductase / Respiratory nitrate reductase	Hglycines
+Glyma.06G116200	description	PTHR32161//PTHR32161:SF8 - FAMILY NOT NAMED // PROTEIN TAG-10, ISOFORM A	Hglycines
+Glyma.06G117200	description	PTHR10209//PTHR10209:SF189 - OXIDOREDUCTASE, 2OG-FE II  OXYGENASE FAMILY PROTEIN // 1-AMINOCYCLOPROPANE-1-CARBOXYLATE OXIDASE 5	Hglycines
+Glyma.06G121100	description	PTHR33021//PTHR33021:SF9 - FAMILY NOT NAMED // BASIC BLUE PROTEIN	Hglycines
+Glyma.06G133300	description	PTHR19359:SF22 - CYTOCHROME B5 ISOFORM A	Hglycines
+Glyma.06G136900	description	PTHR19919//PTHR19919:SF2 - WD REPEAT CONTAINING PROTEIN // PROTEIN TRANSPARENT TESTA GLABRA 1	Hglycines
+Glyma.06G145700	description	PTHR10566//PTHR10566:SF74 - CHAPERONE-ACTIVITY OF BC1 COMPLEX  CABC1 -RELATED // ABC TRANSPORTER-LIKE	Hglycines
+Glyma.07G173000	description	PF00069//PF00954 - Protein kinase domain (Pkinase) // S-locus glycoprotein domain (S_locus_glycop)	Hglycines
+Glyma.07G241800	description	PTHR11711//PTHR11711:SF174 - ADP RIBOSYLATION FACTOR-RELATED // SUBFAMILY NOT NAMED	Hglycines
+Glyma.07G262500	description	PF03595 - Voltage-dependent anion channel (SLAC1)	Hglycines
+Glyma.07G264200	description	PTHR10209//PTHR10209:SF173 - OXIDOREDUCTASE, 2OG-FE II  OXYGENASE FAMILY PROTEIN // SUBFAMILY NOT NAMED	Hglycines
+Glyma.08G076000	description	PTHR31851:SF6 - VACUOLAR IRON TRANSPORTER HOMOLOG 2.1	Hglycines
+Glyma.08G084800	description	K03189 - urease accessory protein (ureG)	Hglycines
+Glyma.08G094900	description	PTHR31448//PTHR31448:SF3 - FAMILY NOT NAMED // IFA-BINDING PROTEIN	Hglycines
+Glyma.08G104600	description	2.1.1.112 - Glucuronoxylan 4-O-methyltransferase	Hglycines
+Glyma.08G105300	description	PF11820 - Protein of unknown function (DUF3339) (DUF3339)	Hglycines
+Glyma.08G108800	description	3.3.1.1 - Adenosylhomocysteinase / SAHase	Hglycines
+Glyma.08G109700	description	PTHR24078//PTHR24078:SF222 - DNAJ HOMOLOG SUBFAMILY C MEMBER // SUBFAMILY NOT NAMED	Hglycines
+Glyma.08G112300	description	PTHR33044:SF28 - BIFUNCTIONAL INHIBITOR/LIPID-TRANSFER PROTEIN/SEED STORAGE 2S ALBUMIN SUPERFAMILY PROTEIN	Hglycines
+Glyma.08G113400	description	PTHR11785//PTHR11785:SF359 - AMINO ACID TRANSPORTER // SUBFAMILY NOT NAMED	Hglycines
+Glyma.08G114900	description	PTHR10527//PTHR10527:SF29 - IMPORTIN BETA // SUBFAMILY NOT NAMED	Hglycines
+Glyma.08G123300	description	PF13401//PF13855 - AAA domain (AAA_22) // Leucine rich repeat (LRR_8)	Hglycines
+Glyma.08G128100	description	PTHR33021//PTHR33021:SF9 - FAMILY NOT NAMED // BASIC BLUE PROTEIN	Hglycines
+Glyma.08G137500	description	PTHR10788//PTHR10788:SF19 - TREHALOSE-6-PHOSPHATE SYNTHASE // TREHALOSE-PHOSPHATE PHOSPHATASE E-RELATED	Hglycines
+Glyma.08G210200	description	PTHR23111//PTHR23111:SF34 - ZINC FINGER PROTEIN // SUBFAMILY NOT NAMED	Hglycines
+Glyma.08G214100	description	PF05678 - VQ motif (VQ)	Hglycines
+Glyma.08G295500	description	PTHR24078//PTHR24078:SF317 - DNAJ HOMOLOG SUBFAMILY C MEMBER // DNAJ HEAT SHOCK PROTEIN-RELATED	Hglycines
+Glyma.08G309400	description	KOG4660 - Protein Mei2, essential for commitment to meiosis, and related proteins	Hglycines
+Glyma.08G319900	description	K06997 - uncharacterized protein (K06997)	Hglycines
+Glyma.09G043400	description	PTHR33509:SF5 - LATE EMBRYOGENESIS ABUNDANT 3 (LEA3) FAMILY PROTEIN	Hglycines
+Glyma.09G047200	description	PF05558 - DREPP plasma membrane polypeptide (DREPP)	Hglycines
+Glyma.09G049100	description	PTHR24298//PTHR24298:SF61 - FAMILY NOT NAMED // CYTOCHROME P450 81D1-RELATED	Hglycines
+Glyma.09G052600	description	PTHR23076//PTHR23076:SF60 - METALLOPROTEASE M41 FTSH // SUBFAMILY NOT NAMED	Hglycines
+Glyma.09G057100	description	PTHR31517//PTHR31517:SF10 - FAMILY NOT NAMED // PEROXIDASE 16-RELATED	Hglycines
+Glyma.09G060200	description	PF00010 - Helix-loop-helix DNA-binding domain (HLH)	Hglycines
+Glyma.09G245300	description	PTHR31307:SF3 - ALCOHOL DEHYDROGENASE TRANSCRIPTION FACTOR MYB/SANT-LIKE PROTEIN	Hglycines
+Glyma.09G245800	description	PTHR31100:SF14 - AT-HOOK MOTIF NUCLEAR LOCALIZED PROTEIN 21-RELATED	Hglycines
+Glyma.09G265500	description	PTHR24057//PTHR24057:SF19 - GLYCOGEN SYNTHASE KINASE-3 ALPHA // SHAGGY-RELATED PROTEIN KINASE BETA-RELATED	Hglycines
+Glyma.09G269600	description	K13265 - vestitone reductase (VR)	Hglycines
+Glyma.10G075500	description	PTHR11615:SF116 - CASPARIAN STRIP MEMBRANE PROTEIN 1-RELATED	Hglycines
+Glyma.10G075600	description	PTHR11615:SF116 - CASPARIAN STRIP MEMBRANE PROTEIN 1-RELATED	Hglycines
+Glyma.10G081700	description	PTHR11850//PTHR11850:SF111 - HOMEOBOX PROTEIN TRANSCRIPTION FACTORS // BEL1-LIKE HOMEODOMAIN PROTEIN 1-RELATED	Hglycines
+Glyma.10G147700	description	PF00582 - Universal stress protein family (Usp)	Hglycines
+Glyma.10G153000	description	PTHR12549:SF17 - WRC, ZF-4CXXC-R1 TRANSCRIPTION FACTOR AND JUMONJI DOMAIN-CONTAINING PROTEIN	Hglycines
+Glyma.10G177200	description	K08916 - light-harvesting complex II chlorophyll a/b binding protein 5 (LHCB5)	Hglycines
+Glyma.10G183200	description	PTHR13773//PTHR13773:SF13 - PHOSPHATIDATE CYTIDYLYLTRANSFERASE // SUBFAMILY NOT NAMED	Hglycines
+Glyma.10G183500	description	K13347 - peroxisomal membrane protein 2 (PXMP2, PMP22)	Hglycines
+Glyma.10G188400	description	PTHR31100//PTHR31100:SF3 - FAMILY NOT NAMED // AT-HOOK MOTIF NUCLEAR LOCALIZED PROTEIN 19-RELATED	Hglycines
+Glyma.10G189300	description	PTHR13301//PTHR13301:SF41 - X-BOX TRANSCRIPTION FACTOR-RELATED // SUBFAMILY NOT NAMED	Hglycines
+Glyma.10G189500	description	PTHR24012//PTHR24012:SF308 - FAMILY NOT NAMED // PROTEIN Y55F3AM.3, ISOFORM A	Hglycines
+Glyma.10G192900	description	PTHR11260//PTHR11260:SF227 - GLUTATHIONE S-TRANSFERASE, GST, SUPERFAMILY, GST DOMAIN CONTAINING // SUBFAMILY NOT NAMED	Hglycines
+Glyma.10G200700	description	PTHR11062:SF112 - GLYCOSYLTRANSFERASE FAMILY PROTEIN 47	Hglycines
+Glyma.10G209000	description	PTHR12537//PTHR12537:SF71 - RNA BINDING PROTEIN PUMILIO-RELATED // PUMILIO HOMOLOG 4	Hglycines
+Glyma.10G214700	description	PTHR31916//PTHR31916:SF3 - FAMILY NOT NAMED // ALKALINE/NEUTRAL INVERTASE CINV1-RELATED	Hglycines
+Glyma.10G221100	description	PTHR19139//PTHR19139:SF102 - AQUAPORIN TRANSPORTER // AQUAPORIN NIP5-1-RELATED	Hglycines
+Glyma.10G227700	description	K01183 - chitinase (E3.2.1.14)	Hglycines
+Glyma.11G119000	description	PF10950 - Protein of unknown function (DUF2775) (DUF2775)	Hglycines
+Glyma.11G119100	description	PF03181 - BURP domain (BURP)	Hglycines
+Glyma.11G120400	description	PF14368 - Probable lipid transfer (LTP_2)	Hglycines
+Glyma.11G120900	description	1.17.1.2 - 4-hydroxy-3-methylbut-2-enyl diphosphate reductase / HMBPP reductase	Hglycines
+Glyma.11G139500	description	PTHR13832//PTHR13832:SF228 - PROTEIN PHOSPHATASE 2C // PROTEIN PHOSPHATASE 2C 36-RELATED	Hglycines
+Glyma.11G144000	description	PTHR21495:SF41 - DIRIGENT PROTEIN 10-RELATED	Hglycines
+Glyma.11G147600	description	PF06830 - Root cap (Root_cap)	Hglycines
+Glyma.11G147700	description	PF06830 - Root cap (Root_cap)	Hglycines
+Glyma.11G215500	description	PTHR20852//PTHR20852:SF59 - GLUTAMINE SYNTHETASE // SUBFAMILY NOT NAMED	Hglycines
+Glyma.11G216300	description	PF00538//PF02178 - linker histone H1 and H5 family (Linker_histone) // AT hook motif (AT_hook)	Hglycines
+Glyma.11G220000	description	PTHR33102:SF9 - DVL11-RELATED	Hglycines
+Glyma.11G220400	description	PTHR22763//PTHR22763:SF42 - RING ZINC FINGER PROTEIN // SUBFAMILY NOT NAMED	Hglycines
+Glyma.11G223200	description	PF07714//PF13947 - Protein tyrosine kinase (Pkinase_Tyr) // Wall-associated receptor kinase galacturonan-binding (GUB_WAK_bind)	Hglycines
+Glyma.11G229100	description	PF10457 - Cholesterol-capturing domain (MENTAL)	Hglycines
+Glyma.11G233300	description	PTHR31213//PTHR31213:SF9 - FAMILY NOT NAMED // ABSCISIC ACID RECEPTOR PYL5	Hglycines
+Glyma.11G234600	description	PTHR22950//PTHR22950:SF323 - AMINO ACID TRANSPORTER // SUBFAMILY NOT NAMED	Hglycines
+Glyma.11G235500	description	PTHR18901:SF29 - HALOACID DEHALOGENASE-LIKE HYDROLASE	Hglycines
+Glyma.11G235600	description	PF05701 - Weak chloroplast movement under blue light (WEMBL)	Hglycines
+Glyma.11G240900	description	2.7.10.1//2.7.11.1 - Receptor protein-tyrosine kinase / Receptor protein tyrosine kinase // Non-specific serine/threonine protein kinase / Threonine-specific protein kinase	Hglycines
+Glyma.11G250500	description	PF05755 - Rubber elongation factor protein (REF) (REF)	Hglycines
+Glyma.12G194100	description	PTHR18966:SF241 - GLUTAMATE RECEPTOR 3.6-RELATED	Hglycines
+Glyma.12G196600	description	PF02298 - Plastocyanin-like domain (Cu_bind_like)	Hglycines
+Glyma.12G199400	description	1.10.9.1 - Plastoquinol--plastocyanin reductase / Cytochrome b6f complex	Hglycines
+Glyma.12G203300	description	K12855 - pre-mRNA-processing factor 6 (PRPF6, PRP6)	Hglycines
+Glyma.12G208900	description	PTHR33869:SF5 - CLAVATA3/ESR (CLE)-RELATED PROTEIN 3	Hglycines
+Glyma.12G210400	description	PTHR18860//PTHR18860:SF31 - 14-3-3 PROTEIN // SUBFAMILY NOT NAMED	Hglycines
+Glyma.12G210600	description	K01595 - phosphoenolpyruvate carboxylase (ppc)	Hglycines
+Glyma.12G210800	description	PTHR31165//PTHR31165:SF10 - FAMILY NOT NAMED // PROTEIN LIGHT-DEPENDENT SHORT HYPOCOTYLS 10-RELATED	Hglycines
+Glyma.12G222500	description	PTHR13780:SF39 - CBS DOMAIN-CONTAINING PROTEIN-RELATED	Hglycines
+Glyma.12G226200	description	PTHR13902//PTHR13902:SF3 - SERINE/THREONINE-PROTEIN KINASE WNK  WITH NO LYSINE -RELATED // GB|AAF34833.1-RELATED	Hglycines
+Glyma.13G004400	description	PTHR11040:SF35 - ZINC TRANSPORTER 3-RELATED	Hglycines
+Glyma.13G005500	description	PF14547 - Hydrophobic seed protein (Hydrophob_seed)	Hglycines
+Glyma.13G149100	description	PTHR14255//PTHR14255:SF5 - ATP-DEPENDENT PROTEASE  CEREBLON // SUBFAMILY NOT NAMED	Hglycines
+Glyma.13G163700	description	PTHR30508:SF1 - UPF0051 PROTEIN ABCI8, CHLOROPLASTIC-RELATED	Hglycines
+Glyma.13G169900	description	PTHR24326:SF136 - HOMEOBOX-LEUCINE ZIPPER PROTEIN ATHB-54-RELATED	Hglycines
+Glyma.13G178700	description	PTHR31614//PTHR31614:SF15 - FAMILY NOT NAMED // ARABINOGALACTAN PROTEIN 30-RELATED	Hglycines
+Glyma.13G181000	description	PTHR11772//PTHR11772:SF14 - ASPARAGINE SYNTHETASE // SUBFAMILY NOT NAMED	Hglycines
+Glyma.13G187100	description	2.1.1.233 - [Phosphatase 2A protein]-leucine-carboxy methyltransferase / Leucine carboxy methyltransferase-1	Hglycines
+Glyma.13G187800	description	PTHR12436 - 80 KDA MCM3-ASSOCIATED PROTEIN	Hglycines
+Glyma.13G191400	description	PTHR11783//PTHR11783:SF89 - SULFOTRANSFERASE  SULT // SUBFAMILY NOT NAMED	Hglycines
+Glyma.13G196200	description	PTHR13683//PTHR13683:SF258 - ASPARTYL PROTEASES // ASPARTYL PROTEASE FAMILY PROTEIN-RELATED	Hglycines
+Glyma.13G205000	description	PF04520 - Senescence regulator (Senescence_reg)	Hglycines
+Glyma.13G217700	description	PF04862 - Protein of unknown function (DUF642) (DUF642)	Hglycines
+Glyma.13G220900	description	PTHR13018:SF22 - EARLY-RESPONSIVE TO DEHYDRATION STRESS PROTEIN (ERD4)	Hglycines
+Glyma.14G028100	description	PTHR24055:SF158 - MITOGEN-ACTIVATED PROTEIN KINASE 20	Hglycines
+Glyma.14G031800	description	PTHR31407:SF6 - OXYGEN-EVOLVING ENHANCER PROTEIN 2-1, CHLOROPLASTIC-RELATED	Hglycines
+Glyma.14G038200	description	PTHR11413//PTHR11413:SF50 - CYSTATIN FAMILY MEMBER // SUBFAMILY NOT NAMED	Hglycines
+Glyma.14G201700	description	K00430 - peroxidase (E1.11.1.7)	Hglycines
+Glyma.14G216100	description	PTHR27001//PTHR27001:SF52 - FAMILY NOT NAMED // PROTEIN KINASE FAMILY PROTEIN-RELATED	Hglycines
+Glyma.15G127400	description	K11717 - cysteine desulfurase / selenocysteine lyase (sufS)	Hglycines
+Glyma.15G134400	description	PTHR23324//PTHR23324:SF85 - SEC14 RELATED PROTEIN // CELLULAR RETINALDEHYDE-BINDING/TRIPLE FUNCTION DOMAIN-CONTAINING PROTEIN	Hglycines
+Glyma.15G152900	description	PF00168 - C2 domain (C2)	Hglycines
+Glyma.15G158900	description	PTHR23076//PTHR23076:SF60 - METALLOPROTEASE M41 FTSH // SUBFAMILY NOT NAMED	Hglycines
+Glyma.15G253700	description	K03541 - photosystem II 10kDa protein (psbR)	Hglycines
+Glyma.15G263600	description	PTHR17204//PTHR17204:SF28 - PRE-MRNA PROCESSING PROTEIN PRP39-RELATED // F1C9.34 PROTEIN-RELATED	Hglycines
+Glyma.16G051800	description	PTHR31719//PTHR31719:SF11 - FAMILY NOT NAMED // NAC DOMAIN-CONTAINING PROTEIN 94-RELATED	Hglycines
+Glyma.16G053900	description	PTHR31072//PTHR31072:SF4 - FAMILY NOT NAMED // TRANSCRIPTION FACTOR TCP20-RELATED	Hglycines
+Glyma.16G060800	description	PTHR31238//PTHR31238:SF42 - FAMILY NOT NAMED // GERMIN-LIKE PROTEIN SUBFAMILY 1 MEMBER 10-RELATED	Hglycines
+Glyma.16G060900	description	PTHR31238//PTHR31238:SF42 - FAMILY NOT NAMED // GERMIN-LIKE PROTEIN SUBFAMILY 1 MEMBER 10-RELATED	Hglycines
+Glyma.16G072000	description	PTHR10209//PTHR10209:SF182 - OXIDOREDUCTASE, 2OG-FE II  OXYGENASE FAMILY PROTEIN // SUBFAMILY NOT NAMED	Hglycines
+Glyma.17G008000	description	PTHR23130//PTHR23130:SF80 - FAMILY NOT NAMED // AUXIN-INDUCED IN ROOT CULTURES PROTEIN 12	Hglycines
+Glyma.17G009800	description	PTHR10209//PTHR10209:SF173 - OXIDOREDUCTASE, 2OG-FE II  OXYGENASE FAMILY PROTEIN // SUBFAMILY NOT NAMED	Hglycines
+Glyma.17G019300	description	PTHR10638//PTHR10638:SF36 - COPPER AMINE OXIDASE // AMINE OXIDASE-RELATED	Hglycines
+Glyma.17G037600	description	K10589 - ubiquitin-protein ligase E3 C (UBE3C)	Hglycines
+Glyma.18G022400	description	PTHR22950//PTHR22950:SF323 - AMINO ACID TRANSPORTER // SUBFAMILY NOT NAMED	Hglycines
+Glyma.18G055500	description	K00430 - peroxidase (E1.11.1.7)	Hglycines
+Glyma.18G056400	description	PF07107 - Wound-induced protein WI12 (WI12)	Hglycines
+Glyma.18G077500	description	K08065 - nuclear transcription Y subunit beta (NFYB)	Hglycines
+Glyma.18G103700	description	PTHR11413//PTHR11413:SF50 - CYSTATIN FAMILY MEMBER // SUBFAMILY NOT NAMED	Hglycines
+Glyma.18G191800	description	PTHR33122:SF4 - BIFUNCTIONAL INHIBITOR/LIPID-TRANSFER PROTEIN/SEED STORAGE 2S ALBUMIN-LIKE PROTEIN	Hglycines
+Glyma.18G192000	description	KOG3591 - Alpha crystallins	Hglycines
+Glyma.18G201100	description	PTHR14209//PTHR14209:SF10 - ISOAMYL ACETATE-HYDROLYZING ESTERASE 1 // SUBFAMILY NOT NAMED	Hglycines
+Glyma.19G000200	description	PTHR10949//PTHR10949:SF11 - LIPOYL SYNTHASE // SUBFAMILY NOT NAMED	Hglycines
+Glyma.19G001000	description	PTHR22814//PTHR22814:SF47 - COPPER TRANSPORT PROTEIN ATOX1-RELATED // SUBFAMILY NOT NAMED	Hglycines
+Glyma.19G007800	description	PTHR22939:SF81 - PROTEASE DO-LIKE 1, CHLOROPLASTIC	Hglycines
+Glyma.19G010100	description	PTHR24326:SF136 - HOMEOBOX-LEUCINE ZIPPER PROTEIN ATHB-54-RELATED	Hglycines
+Glyma.19G011600	description	KOG4510 - Permease of the drug/metabolite transporter (DMT) superfamily	Hglycines
+Glyma.19G011700	description	K10529 - alpha-dioxygenase (DOX1)	Hglycines
+Glyma.19G013800	description	K17892 - ferredoxin-thioredoxin reductase catalytic chain (FTRC)	Hglycines
+Glyma.19G016000	description	PF05542 - Protein of unknown function (DUF760) (DUF760)	Hglycines
+Glyma.19G109000	description	PF14200 - Ricin-type beta-trefoil lectin domain-like (RicinB_lectin_2)	Hglycines
+Glyma.19G122700	description	PF14379 - MYB-CC type transfactor, LHEQLE motif (Myb_CC_LHEQLE)	Hglycines
+Glyma.19G129300	description	K14819 - dual specificity phosphatase 12 [EC:3.1.3.16 3.1.3.48] (DUSP12, YVH1)	Hglycines
+Glyma.19G161100	description	K14484 - auxin-responsive protein IAA (IAA)	Hglycines
+Glyma.19G186100	description	PTHR19139:SF52 - AQUAPORIN TIP1-1	Hglycines
+Glyma.19G189100	description	K10588 - ubiquitin-protein ligase E3 B (UBE3B)	Hglycines
+Glyma.19G193800	description	PTHR10634 - AN1-TYPE ZINC FINGER PROTEIN	Hglycines
+Glyma.19G204400	description	K04382 - serine/threonine-protein phosphatase 2A catalytic subunit (PPP2C)	Hglycines
+Glyma.19G219500	description	PTHR11453:SF44 - BORON TRANSPORTER 1-RELATED	Hglycines
+Glyma.19G228700	description	PF00582 - Universal stress protein family (Usp)	Hglycines
+Glyma.19G230300	description	PF13947 - Wall-associated receptor kinase galacturonan-binding (GUB_WAK_bind)	Hglycines
+Glyma.19G234100	description	PTHR23430//PTHR23430:SF103 - HISTONE H2A // SUBFAMILY NOT NAMED	Hglycines
+Glyma.20G010900	description	1.14.11.31 - Thebaine 6-O-demethylase	Hglycines
+Glyma.20G017900	description	PTHR31338//PTHR31338:SF16 - FAMILY NOT NAMED // POLYKETIDE CYCLASE/DEHYDRASE AND LIPID TRANSPORT SUPERFAMILY PROTEIN	Hglycines
+Glyma.20G020900	description	PF14299 - Phloem protein 2 (PP2)	Hglycines
+Glyma.20G030300	description	PTHR33133:SF7 - F26K24.10 PROTEIN	Hglycines
+Glyma.20G033800	description	PTHR11615//PTHR11615:SF81 - NITRATE, FROMATE, IRON DEHYDROGENASE // CASPARIAN STRIP MEMBRANE PROTEIN 5	Hglycines
+Glyma.20G082800	description	KOG0131 - Splicing factor 3b, subunit 4	Hglycines
+Glyma.20G096100	description	PTHR33124:SF7 - TRANSCRIPTION FACTOR BHLH149	Hglycines
+Glyma.20G100400	description	K01354 - oligopeptidase B (ptrB)	Hglycines
+Glyma.20G105800	description	PTHR20922//PTHR20922:SF15 - UNCHARACTERIZED // A_TM021B04.14 PROTEIN	Hglycines
+Glyma.20G106600	description	PF11833 - Protein of unknown function (DUF3353) (DUF3353)	Hglycines
+Glyma.20G178900	description	K06688 - ubiquitin-conjugating enzyme E2 C (UBE2C, UBC11)	Hglycines
+Glyma.20G212900	description	K08916 - light-harvesting complex II chlorophyll a/b binding protein 5 (LHCB5)	Hglycines
+Glyma.20G213700	description	2.1.1.150 - Isoflavone 7-O-methyltransferase	Hglycines
+Glyma.20G214200	description	PTHR31235//PTHR31235:SF22 - FAMILY NOT NAMED // PEROXIDASE 47	Hglycines
+Glyma.20G215500	description	PF03140 - Plant protein of unknown function (DUF247)	Hglycines

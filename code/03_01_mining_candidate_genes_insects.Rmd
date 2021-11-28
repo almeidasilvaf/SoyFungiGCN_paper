@@ -1,0 +1,282 @@
+---
+title: "Prioritizing candidates for insects"
+author: "Fabrício Almeida-Silva"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=TRUE,
+                      warning=FALSE, 
+                      message=FALSE,
+                      tidy.opts=list(width.cutoff=60),
+                      tidy=TRUE)
+```
+
+## Candidate gene mining
+
+Now, we will mine candidate genes with {cageminer}. To start, let's get the guide genes.
+
+```{r load_data}
+library(ggplot2)
+library(here)
+library(cageminer)
+library(tidyverse)
+
+# Load SNP ranges
+load(here("products", "result_files", "snp_granges.rda"))
+
+# Create a gene-based GRanges object
+gff <- rtracklayer::import(here("data", "PLAZA_selected.transcripts.gff.gz"))
+gff_gene <- gff[gff$type == "gene", ]
+rm(gff)
+```
+
+```{r get_guides}
+#----Get biotic stress-related genes from Almeida-Silva e Venancio 2021----
+guides <- readr::read_tsv("https://raw.githubusercontent.com/almeidasilvaf/SoyFungi_GWAS_GCN/main/products/tables/sup_table3.tsv")
+write_tsv(guides, 
+          here("products", "tables", "sup_table3.tsv"))
+
+# EDA: Number of genes per class
+guides %>%
+  janitor::tabyl(Description) %>%
+  arrange(-n) %>%
+  head(n=15)
+```
+
+Find high-confidence candidates for insects.
+
+```{r insects}
+library(BioNERO)
+library(SummarizedExperiment)
+set.seed(1)
+
+#----Load and filter expression data----
+load("~/Dropbox/Atlas/atlasv2_tpm.rda")
+exp_insect <- atlas_tpm[, atlas_tpm$Stress_info == "insect" &
+                   !is.na(atlas_tpm$Stress_info)]
+rm(atlas_tpm)
+
+#----Infer GCNs for insects----
+exp_insect <- exp_preprocess(exp_insect, min_exp=5, Zk_filtering=FALSE)
+metadata_insect <- colData(exp_insect) %>%
+  as.data.frame() %>%
+  mutate(Pathogen = str_sub(Pathogen, 1, 3)) %>%
+  mutate(annot = paste(Pathogen, Sample_description, sep = "_")) %>%
+  select(annot)
+colData(exp_insect) <- DataFrame(metadata_insect)
+
+sft_insect <- SFT_fit(exp_insect, net_type="unsigned", cor_method="pearson")
+gcn_insect <- exp2gcn(exp_insect, net_type="unsigned", cor_method="pearson",
+                     SFTpower=sft_insect$power)
+
+# Cleaning up
+source(here::here("code", "utils.R"))
+workspace_size()
+gcn_insect$adjacency_matrix <- NULL
+gcn_insect$dendro_plot_objects <- NULL
+gcn_insect$moduleColors <- NULL
+gcn_insect$correlation_matrix <- round(gcn_insect$correlation_matrix, 2)
+
+#----Mine candidates----
+# Aphis glycines
+conditions_agl <- c(
+  "Agl_stress_res_48h", "Agl_stress_res_6h", "Agl_stress_res_12h",
+  "Agl_stress_48HAI_susceptible", "Agl_stress_96HAI_susceptible",
+  "Agl_stress_48HAI_antibiotic", "Agl_stress_96HAI_antibiotic",
+  "Agl_stress_48HAI_antixenotic", "Agl_stress_96HAI_antixenotic",
+  "SBA_sus_24h", "SBA_res_24h",
+  "SBA_sus_48h", "SBA_res_48h"
+)
+mining_aglycines <- mine_candidates(
+  gene_ranges = gff_gene, 
+  marker_ranges = snp_grangeslist$Aglycines,
+  exp = exp_insect,
+  gcn = gcn_insect,
+  guides = guides,
+  metadata = metadata_insect,
+  sample_group = conditions_agl
+)
+length(unique(mining_aglycines$gene))
+
+# Spodoptera litura
+conditions_sli <- c(
+  "Sli_stress_NNcultivar", "Sli_stress_WXcultivar"
+)
+exp_sli <- exp_insect[, grepl("Sli.*", exp_insect$annot)]
+mining_slitura <- mine_candidates(
+  gene_ranges = gff_gene, 
+  marker_ranges = snp_grangeslist$Slitura,
+  exp = exp_sli,
+  gcn = gcn_insect,
+  guides = guides,
+  metadata = metadata_insect,
+  sample_group = conditions_sli
+)
+length(unique(mining_slitura$gene))
+
+# Save all candidates
+save(mining_aglycines, 
+     file = here("products", "result_files", "aglycines_minedcand.rda"),
+     compress="xz")
+
+save(mining_slitura, 
+     file = here("products", "result_files", "slitura_minedcand.rda"),
+     compress="xz")
+```
+
+Now, let's score genes using cageminer's scoring function.
+
+```{r scoring}
+cand_unique <- list(
+  Aglycines = unique(mining_aglycines$gene),
+  Slitura = unique(mining_slitura$gene)
+)
+
+#----Get candidates that are hubs----
+hubs <- get_hubs_gcn(exp_insect, gcn_insect)
+candidates_hubs <- lapply(cand_unique, function(x) {
+  return(hubs[hubs$Gene %in% x, ])
+})
+
+#----Get candidates that are TFs----
+tfs <- as.data.frame(readr::read_tsv("http://planttfdb.gao-lab.org/download/TF_list/Gma_TF_list.txt.gz"))[, c(2,3)]
+candidates_tfs <- lapply(cand_unique, function(x) {
+  y <- tfs[tfs$Gene_ID %in% x, ]
+  return(y)
+})
+
+#----Score genes----
+hubs <- hubs$Gene
+tfs <- tfs$Gene_ID
+
+aglycines_score <- score_genes(mining_aglycines, hubs, tfs)
+slitura_score <- score_genes(mining_slitura, hubs, tfs)
+
+#----Export best candidates as a table----
+dfexport_candidates <- rbind(
+  aglycines_score %>% mutate(species = "A. glycines") %>% select(1,5,6),
+  slitura_score %>% mutate(species = "S. litura") %>% select(1,5,6)
+)
+
+write_tsv(dfexport_candidates, 
+          file = here("products", "tables", "top_candidates_insects.tsv"))
+```
+
+Exporting descriptions for mined candidates.
+
+```{r description}
+gmax_des <- readr::read_tsv("https://ftp.psb.ugent.be/pub/plaza/plaza_public_dicots_05/Descriptions/gene_description.gma.csv.gz", skip=8)
+names(gmax_des) <- c("Gene", "description_type", "description")
+
+cand_description <- Reduce(rbind, list(
+  aglycines = gmax_des[gmax_des$Gene %in% cand_unique$Aglycines, ] %>%
+    mutate(species = "Aglycines"),
+  slitura = gmax_des[gmax_des$Gene %in% cand_unique$Slitura, ] %>%
+    mutate(species = "Situra")
+))
+write_tsv(cand_description, 
+          file = here("products", "tables", "mined_candidates_description.tsv"))
+```
+
+
+## Export module enrichment and network file for shiny app development
+
+```{r export_files}
+options(timeout = 600)
+
+# Get GO annotation
+go_annotation <- as.data.frame(
+  readr::read_tsv("https://ftp.psb.ugent.be/pub/plaza/plaza_public_dicots_05/GO/go.gma.csv.gz", skip=8)
+)
+go_annotation <- go_annotation[, c(1,8)]
+names(go_annotation) <- c("Gene", "GO_description")
+
+# Get Interpro annotation
+interpro_annotation <- as.data.frame(
+  readr::read_tsv("https://ftp.psb.ugent.be/pub/plaza/plaza_public_dicots_05/InterPro/interpro.gma.csv.gz", skip=8)
+)
+interpro_annotation <- interpro_annotation[, c(1,4)]
+
+# Get MapMan annotation
+mapman <- readr::read_tsv("https://ftp.psb.ugent.be/pub/plaza/plaza_public_dicots_05/MapMan/mapman.gma.csv.gz", skip=8)
+mapman_annotation <- as.data.frame(mapman[, c(3,5)])
+names(mapman_annotation) <- c("Gene", "Description")
+
+enrich_mapman <- module_enrichment(
+       net = gcn_insect,
+       background_genes = rownames(exp_insect),
+       mapman_annotation
+)
+
+enrich_go <- module_enrichment(
+       net = gcn_insect,
+       background_genes = rownames(exp_insect),
+       go_annotation
+)
+
+enrich_interpro <- module_enrichment(
+       net = gcn_insect,
+       background_genes = rownames(exp_insect),
+       interpro_annotation
+)
+
+enrichment_results <- Reduce(rbind, list(
+  mapman = enrich_mapman[, c(1,5,7)] %>% mutate(Category = "MapMan"),
+  go = enrich_go[, c(1,5,7)] %>% mutate(Category = "GO"),
+  interpro = enrich_interpro[, c(1,5,7)] %>% mutate(Category = "Interpro")
+))
+
+
+genes_modules <- gcn_insect$genes_and_modules
+genes_modules <- genes_modules[genes_modules$Modules != "grey", ]
+degree <- gcn_insect$kIN
+
+edges <- lapply(unique(genes_modules$Modules), function(x) {
+  y <- get_edge_list(gcn_insect, module = x, filter=TRUE,
+                     method="min_cor", rcutoff = 0.4)
+  return(y)
+})
+names(edges) <- unique(genes_modules$Modules)
+
+greygenes <- genes_modules[genes_modules$Modules == "grey", 1]
+cor_matrix <- gcn_insect$correlation_matrix[
+  !(rownames(gcn_insect$correlation_matrix) %in% greygenes),
+  !(colnames(gcn_insect$correlation_matrix) %in% greygenes)
+]
+cor_matrix[cor_matrix < 0.2 & cor_matrix > -0.2] <- NA
+edgelist <- cormat_to_edgelist(cor_matrix)
+
+# Export files
+save(enrichment_results, 
+     file = here("products", "result_files", "shiny_insect_enrichment.rda"),
+     compress = "xz")
+
+save(genes_modules, 
+     file = here("products", "result_files", "shiny_insect_gmodules.rda"), 
+     compress="xz")
+
+save(degree, 
+     file = here("products", "result_files", "shiny_insect_degree.rda"), 
+     compress="xz")
+
+save(edges, 
+     file = here("products", "result_files", "shiny_insect_edgelists.rda"), 
+     compress="xz")
+
+save(hubs, 
+     file = here("products", "result_files", "shiny_insect_hubs.rda"), 
+     compress="xz")
+```
+
+## Session information
+
+This document was created under the following conditions:
+
+```{r session_info} 
+sessionInfo()
+```
+
+
+

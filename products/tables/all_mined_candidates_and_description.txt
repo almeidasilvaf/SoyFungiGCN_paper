@@ -1,0 +1,373 @@
+Gene	Predicted function	Role	Species
+Glyma.04G085600	Unknown orphan gene	Unknown	Aglycines
+Glyma.10G002200	Calmodulin	Signaling	Aglycines
+Glyma.04G085500	Lysophospholipase	Signaling	Aglycines
+Glyma.19G187200	UDP-glycosyltransferase	Signaling	Aglycines
+Glyma.07G021800	Chaperone, DnaJ domain	Translational regulation	Aglycines
+Glyma.11G194500	Acyl-CoA synthetase	Phytohormone metabolism	Aglycines
+Glyma.13G326800	Galactose oxidase	Physical barrier	Aglycines
+Glyma.19G018600	AAA-ATPase	Oxidative stress	Aglycines
+Glyma.01G210200	Autophagy protein	Apoptosis	Aglycines
+Glyma.01G238800	Sugar transporter	Signaling	Aglycines
+Glyma.19G187100	UDP-glycosyltransferase	Signaling	Aglycines
+Glyma.08G158600	Sugar transporter	Signaling	Aglycines
+Glyma.01G214600	STAY-GREEN 1	Unknown	Aglycines
+Glyma.13G207100	Unknown	Unknown	Aglycines
+Glyma.07G066700	Ubiquinone biosynthesis protein	Oxidative stress	Aglycines
+Glyma.10G162100	bZIP transcription factor	Transcriptional regulation	Aglycines
+Glyma.16G049000	Light-regulated protein lir1	Unknown	Aglycines
+Glyma.10G009800	Protein phosphatase 2C	Signaling	Aglycines
+Glyma.13G348100	Casein kinase	Signaling	Aglycines
+Glyma.09G005700	WRKY transcription factor	Transcriptional regulation	Aglycines
+Glyma.13G215000	Beta-amylase	Physical barrier	Aglycines
+Glyma.06G290000	ERF-AP2 transcription factor	Transcriptional regulation	Aglycines
+Glyma.14G098200	Unknown	Unknown	Aglycines
+Glyma.05G146300	U-box domain-containg protein	Signaling	Aglycines
+Glyma.06G269500	Translation initiation factor	Translational regulation	Aglycines
+Glyma.10G262700	UDP-glucosyl transferase 84B1	Phytohormone metabolism	Aglycines
+Glyma.13G338600	Chaperone, DnaJ domain	Translational regulation	Aglycines
+Glyma.12G093300	Protein of unknown function	Unknown	Aglycines
+Glyma.12G055400	bHLH transcription factor	Transcriptional regulation	Aglycines
+Glyma.13G212800	Two-component member of MAPK pathway	Signaling	Aglycines
+Glyma.09G003900	Autophagy protein Atg8 ubiquitin like	Apoptosis	Aglycines
+Glyma.05G139800	NAD(P)H dehydrogenase subunit	Oxidative stress	Aglycines
+Glyma.10G208800	Amino acid transporter	Transport	Aglycines
+Glyma.08G156500	NAC transcription factor	Transcriptional regulation	Aglycines
+Glyma.13G221300	Positive regulator of plastid gene expression	Transcriptional regulation	Aglycines
+Glyma.20G142800	Peroxisomal adenine nucleotide carrier 1	Transport	Aglycines
+Glyma.01G025600	Leucine-rich repeat protein	Signaling	Aglycines
+Glyma.19G191200	Threonyl-tRNA synthetase	Translational regulation	Aglycines
+Glyma.20G144700	Photosystem I subunit	Oxidative stress	Aglycines
+Glyma.13G341500	LRR-RK	Recognition	Aglycines
+Glyma.16G053800	ACT domain repeat 4	Translational regulation	Aglycines
+Glyma.16G128600	Calcium-dependent protein kinase	Signaling	Aglycines
+Glyma.16G130900	Serine carboxypeptidase	Signaling	Aglycines
+Glyma.07G178600	Serine/threonine protein kinase	Signaling	Aglycines
+Glyma.13G331300	LRR-RK	Recognition	Aglycines
+Glyma.07G049600	Pyruvate dehydrogenase	Oxidative stress	Aglycines
+Glyma.13G227500	Hypoxia responsive unknown protein	Unknown	Aglycines
+Glyma.04G054100	S-adenosyl-L-methionine-dependent methyltransferase	Phytohormone metabolism	Aglycines
+Glyma.04G057100	Protein of unknown function	Unknown	Aglycines
+Glyma.09G031800	S1 RNA-binding protein	Transcriptional regulation	Aglycines
+Glyma.12G194000	MATE efflux protein	Transport	Aglycines
+Glyma.10G187300	Electron transfer flavoprotein beta	Oxidative stress	Aglycines
+Glyma.11G180200	Protein of unknown function	Unknown	Aglycines
+Glyma.18G207900	SEC14 cytosolic factor family protein	Signaling	Aglycines
+Glyma.02G061100	Photosystem II subunit - Mn stabilizing protein	Oxidative stress	Aglycines
+Glyma.07G034400	KMD protein - Kelch repeat	Phytohormone metabolism	Aglycines
+Glyma.17G068200	RING/U-box protein	Signaling	Aglycines
+Glyma.04G064100	Homeobox domain transcription factor	Transcriptional regulation	Aglycines
+Glyma.12G059900	Glucose transporter	Signaling	Aglycines
+Glyma.10G191200	Haloacid dehalogenase-like hydrolase	Oxidative stress	Aglycines
+Glyma.07G198500	Ribosomal protein	Translational regulation	Aglycines
+Glyma.16G050900	CONSTANS-like zinc finger - transcription factor	Transcriptional regulation	Aglycines
+Glyma.01G226700	Mg-chelatase enzyme, chlorophyll biosynthesis	Oxidative stress	Aglycines
+Glyma.17G068100	Unknown transmembrane protein	Unknown	Aglycines
+Glyma.07G023500	Serine/threonine protein kinase	Signaling	Aglycines
+Glyma.04G056000	YGGT family	Unknown	Aglycines
+Glyma.13G235900	Unknown transmembrane protein	Unknown	Aglycines
+Glyma.06G269600	Translation initiation factor	Translational regulation	Aglycines
+Glyma.19G223600	RNA helicase	Transcriptional regulation	Aglycines
+Glyma.13G145200	RNA-binding protein	Transcriptional regulation	Aglycines
+Glyma.07G181800	Protein of unknown function	Unknown	Aglycines
+Glyma.10G284600	CAX-interacting protein	Signaling	Aglycines
+Glyma.02G073000	Shikimate kinase	SM metabolism	Aglycines
+Glyma.13G167200	Heat shock protein	Oxidative stress	Aglycines
+Glyma.20G143900	Long chain acyl-CoA synthetase	Signaling	Aglycines
+Glyma.08G175900	Chaperonin 60 subunit	Translational regulation	Aglycines
+Glyma.04G089800	Glutamyl-tRNA reductase	Translational regulation	Aglycines
+Glyma.05G160300	Protein of unknown function	Unknown	Aglycines
+Glyma.12G059600	Nitrogen metabolic regulation protein, dehydrogenase	Oxidative stress	Aglycines
+Glyma.07G198700	Protein of unknown function	Unknown	Aglycines
+Glyma.12G214800	Protein of unknown function	Unknown	Aglycines
+Glyma.12G064100	Translocase, respiratory chain assembly-related	Oxidative stress	Aglycines
+Glyma.10G230600	Copper transporter	Transport	Aglycines
+Glyma.17G067700	P-loop nucleoside triphosphate hydrolases	Signaling	Aglycines
+Glyma.19G200700	RNA-binding protein	Transcriptional regulation	Aglycines
+Glyma.07G022000	Plastocyanin-like domain containing protein	Oxidative stress	Aglycines
+Glyma.07G033100	ATP transport	Transport	Aglycines
+Glyma.05G152400	MYB-like protein	Transcriptional regulation	Aglycines
+Glyma.04G076900	Thioredoxin	Oxidative stress	Aglycines
+Glyma.05G135900	Protein of unknown function	Unknown	Aglycines
+Glyma.08G185800	Fibrillin	Signaling	Aglycines
+Glyma.13G177900	Ribosomal protein	Translational regulation	Aglycines
+Glyma.08G288400	Potassium transporter	Transport	Aglycines
+Glyma.19G192600	Transcriptional activator	Transcriptional regulation	Aglycines
+Glyma.12G092300	Nitrilase 4	Oxidative stress	Aglycines
+Glyma.16G057700	RNA methyltransferase	Transcriptional regulation	Aglycines
+Glyma.07G022700	Uridylyltransferase	Signaling	Aglycines
+Glyma.10G151800	Methionine sulfoxide reductase	Oxidative stress	Aglycines
+Glyma.13G167400	Protein of unknown function	Unknown	Aglycines
+Glyma.17G072300	Translation initiation factor	Translational regulation	Aglycines
+Glyma.17G094700	Serine/threonine protein kinase	Signaling	Aglycines
+Glyma.07G036400	Phospholipid:diacylglycerol acyltransferase	Signaling	Aglycines
+Glyma.17G092900	Glycosyl hydrolase 47	Physical barrier	Aglycines
+Glyma.07G018300	Splicing-related PPR-containing protein	Transcriptional regulation	Aglycines
+Glyma.08G283700	Pyruvate phosphate dikinase, starch degradation	Oxidative stress	Aglycines
+Glyma.17G095000	bHLH transcription factor	Transcriptional regulation	Aglycines
+Glyma.19G232300	Serine/threonine protein phosphatase	Signaling	Aglycines
+Glyma.05G166300	Transmembrane GTPase	Signaling	Aglycines
+Glyma.01G035700	RNA-binding protein	Transcriptional regulation	Aglycines
+Glyma.13G356200	tRNAse Z	Translational regulation	Aglycines
+Glyma.11G194600	Copper transporter	Transport	Aglycines
+Glyma.13G232500	Magnesium chelatase	Oxidative stress	Aglycines
+Glyma.07G102100	Zinc-finger, RNA binding	Transcriptional regulation	Aglycines
+Glyma.19G198300	Hypothetical protein	Unknown	Aglycines
+Glyma.07G006600	Protein transport-related channel	Transport	Aglycines
+Glyma.13G349100	Glyoxylate reductase	Oxidative stress	Aglycines
+Glyma.12G078100	Chaperonin 60 subunit	Translational regulation	Aglycines
+Glyma.06G277600	ATP synthase	Signaling	Aglycines
+Glyma.11G189600	Cellulose synthase	Physical barrier	Aglycines
+Glyma.10G291200	Cobalamin biosynthesis-related	Unknown	Aglycines
+Glyma.17G071000	RNA polymerase subunit	Transcriptional regulation	Aglycines
+Glyma.20G116100	Ribosomal protein	Translational regulation	Aglycines
+Glyma.20G104700	CAX-interacting protein	Signaling	Aglycines
+Glyma.10G024400	Pale cress protein	Phytohormone metabolism	Aglycines
+Glyma.13G343200	Rho GTPase	Oxidative stress	Aglycines
+Glyma.05G154700	Protein of unknown function	Unknown	Aglycines
+Glyma.07G002100	Fibrillin	Signaling	Aglycines
+Glyma.14G177200	Ascorbate peroxidase	Oxidative stress	Aglycines
+Glyma.10G138600	Protoporphyrinogen oxidase	Oxidative stress	Aglycines
+Glyma.19G001100	Ribosomal protein	Translational regulation	Aglycines
+Glyma.09G038600	Beta-xylosidase	Physical barrier	Aglycines
+Glyma.17G094300	PPR domain-containing protein, RNA binding	Transcriptional regulation	Aglycines
+Glyma.05G148600	Unknown transmembrane protein	Unknown	Aglycines
+Glyma.13G230600	Ribosomal protein	Translational regulation	Aglycines
+Glyma.01G213300	Protein of unknown function	Unknown	Aglycines
+Glyma.13G144800	Adenosine kinase 2	Signaling	Aglycines
+Glyma.05G144300	RING/U-box protein	Signaling	Aglycines
+Glyma.12G204400	Voltage-gated cation channel	Transport	Aglycines
+Glyma.10G194300	Phosphofructosekinase 4	Oxidative stress	Aglycines
+Glyma.07G100500	Cellobiose beta glucosidase	Physical barrier	Aglycines
+Glyma.08G297200	Whirly transcription factor	Transcriptional regulation	Aglycines
+Glyma.12G217500	Calcium binding EF hand protein	Signaling	Aglycines
+Glyma.02G039700	Protein of unknown function	Unknown	Aglycines
+Glyma.12G223400	Thioredoxin	Oxidative stress	Aglycines
+Glyma.13G216800	GTP-binding protein	Oxidative stress	Aglycines
+Glyma.04G072300	Photosystem II reaction center	Oxidative stress	Aglycines
+Glyma.13G352500	RNA methyltransferase	Transcriptional regulation	Aglycines
+Glyma.08G285100	Protein of unknown function	Unknown	Aglycines
+Glyma.09G024700	LRR-RK	Recognition	Aglycines
+Glyma.09G040200	Hypersensitive to red and blue light (HRB)	Signaling	Aglycines
+Glyma.11G195900	Chaperonin 60 subunit	Translational regulation	Aglycines
+Glyma.07G114900	Ribosomal protein	Translational regulation	Aglycines
+Glyma.04G087000	Plastid-encoded RNA polymerase, phytochrome signaling	Transcriptional regulation	Aglycines
+Glyma.13G224900	Aquaporin	Oxidative stress	Aglycines
+Glyma.07G117400	LRR-RK	Recognition	Aglycines
+Glyma.17G091000	Aldehyde dehydrogenase	Oxidative stress	Aglycines
+Glyma.01G025100	Unknown	Unknown	Aglycines
+Glyma.10G155400	Amidase 1, IAA biosynthesis-related	Phytohormone metabolism	Aglycines
+Glyma.08G160700	Acid phosphatase/vanadium-dependent haloperoxidase	Oxidative stress	Aglycines
+Glyma.07G056600	DEAD box helicase	Transcriptional regulation	Aglycines
+Glyma.08G238300	Ribosomal protein	Translational regulation	Aglycines
+Glyma.13G227000	PPR domain-containing protein, RNA binding	Transcriptional regulation	Aglycines
+Glyma.13G236100	Unknown	Unknown	Aglycines
+Glyma.07G049100	bHLH transcription factor	Transcriptional regulation	Aglycines
+Glyma.19G012900	Heavy metal detoxification protein	Oxidative stress	Aglycines
+Glyma.12G226100	Protein phosphatase 2C	Signaling	Aglycines
+Glyma.10G139500	Cyclophilin	Signaling	Aglycines
+Glyma.01G227400	Porphobilinogen deaminase 	Oxidative stress	Aglycines
+Glyma.04G088800	LRR-RK	Recognition	Aglycines
+Glyma.07G075800	Unknown	Unknown	Aglycines
+Glyma.17G069600	UDP-glucuronate epimerase	Physical barrier	Aglycines
+Glyma.05G194700	Protein of unknown function	Unknown	Slitura
+Glyma.07G036400	Phospholipid:diacylglycerol acyltransferase	Signaling	Slitura
+Glyma.06G195300	Protein of unknown function	Unknown	Slitura
+Glyma.07G034400	Galactose oxidase - Kelch repeat containing	Phytohormone metabolism	Slitura
+Glyma.06G175400	RNA-binding protein	Transcriptional regulation	Slitura
+Glyma.07G033100	ATP transport	Transport	Slitura
+Glyma.12G059900	Glucose transporter	Signaling	Slitura
+Glyma.01G002400	Secretory phospholipase A2	Signaling	Hglycines
+Glyma.01G016800	SNARE-associated Golgi protein	Transport	Hglycines
+Glyma.01G020300	Metallopeptidase	Signaling	Hglycines
+Glyma.01G026700	Alanine-glyoxylate transaminase	Oxidative stress	Hglycines
+Glyma.01G028700	NSP-interacting kinase 3	Signaling	Hglycines
+Glyma.01G077400	Phosphatidylinositol glycan, class N	Signaling	Hglycines
+Glyma.01G157900	Glutamate receptor	Signaling	Hglycines
+Glyma.01G161200	SEC14 cytosolic factor protein / phosphoglyceride transfer	Transport	Hglycines
+Glyma.01G179900	Homeobox transcription factor	Transcriptional regulation	Hglycines
+Glyma.01G200200	Plastidial pyruvate kinase 3, chloroplastic	Signaling	Hglycines
+Glyma.01G204800	Expansin-like	Physical barrier	Hglycines
+Glyma.01G207300	HD-Zip transcription factor	Transcriptional regulation	Hglycines
+Glyma.02G000700	Sieve element occlusion protein	Unknown	Hglycines
+Glyma.02G005800	Inorganic phosphate transporter	Transport	Hglycines
+Glyma.02G009100	Protein phosphatase 2C	Signaling	Hglycines
+Glyma.02G019100	HD-Zip transcription factor	Transcriptional regulation	Hglycines
+Glyma.02G027800	Metallopeptidase	Signaling	Hglycines
+Glyma.02G125100	2OG-Fe(II) oxygenase	Oxidative stress	Hglycines
+Glyma.02G132100	Ferredoxin-nitrate reductase	Oxidative stress	Hglycines
+Glyma.02G133200	PLAC8 family protein	Apoptosis	Hglycines
+Glyma.02G134600	Serine/threonine protein kinase	Signaling	Hglycines
+Glyma.02G140900	winged-helix DNA-binding transcription factor	Transcriptional regulation	Hglycines
+Glyma.02G143100	Protein of unknown function	Unknown	Hglycines
+Glyma.03G194000	Zinc-finger protein	Transcriptional regulation	Hglycines
+Glyma.04G013500	BURP domain-contaning	Signaling	Hglycines
+Glyma.04G017500	Catalase peroxidase	Oxidative stress	Hglycines
+Glyma.04G027800	Walls Are Thin 1 protein	Transport	Hglycines
+Glyma.04G028500	Thioredoxin	Oxidative stress	Hglycines
+Glyma.04G076300	Sarcosine oxidase	Oxidative stress	Hglycines
+Glyma.04G080300	Sulfite exporter	Transport	Hglycines
+Glyma.04G089700	Phosphoenolpyruvate carboxykinase	Unknown	Hglycines
+Glyma.06G109200	Nitrate reductase	Oxidative stress	Hglycines
+Glyma.06G116200	Protease family S9B	Signaling	Hglycines
+Glyma.06G117200	2OG-Fe(II) oxygenase	Oxidative stress	Hglycines
+Glyma.06G121100	Plastocyanin-like domain	Oxidative stress	Hglycines
+Glyma.06G133300	Cytochrome b5-like Heme/Steroid binding domain	Oxidative stress	Hglycines
+Glyma.06G136900	Transducin	Signaling	Hglycines
+Glyma.06G145700	ABC transporter	Transport	Hglycines
+Glyma.07G173000	Protein kinase	Signaling	Hglycines
+Glyma.07G241800	ADP-ribosylation factor family	Signaling	Hglycines
+Glyma.07G262500	Voltage-dependent anion channel	Transport	Hglycines
+Glyma.07G264200	2OG-Fe(II) oxygenase	Oxidative stress	Hglycines
+Glyma.08G076000	Vacuolar iron transporter	Transport	Hglycines
+Glyma.08G084800	Urease	Unknown	Hglycines
+Glyma.08G094900	Protein of unknown function	Unknown	Hglycines
+Glyma.08G104600	Glucuronoxylan 4-O-methyltransferase	Physical barrier	Hglycines
+Glyma.08G105300	Protein of unknown function	Unknown	Hglycines
+Glyma.08G108800	L-methionine degradation I (to L-homocysteine)	Oxidative stress	Hglycines
+Glyma.08G109700	DNAJ domain	Oxidative stress	Hglycines
+Glyma.08G112300	Lipid-transfer protein	Direct function	Hglycines
+Glyma.08G113400	Amino acid transporter	Transport	Hglycines
+Glyma.08G114900	Importin beta	Transport	Hglycines
+Glyma.08G123300	LRR-RK	Recognition	Hglycines
+Glyma.08G128100	Plastocyanin-like domain	Oxidative stress	Hglycines
+Glyma.08G137500	Trehalose-6-phosphate	Signaling	Hglycines
+Glyma.08G210200	Zinc-finger protein	Transcriptional regulation	Hglycines
+Glyma.08G214100	VQ motif-containing protein	Transcriptional regulation	Hglycines
+Glyma.08G295500	DNAJ domain	Oxidative stress	Hglycines
+Glyma.08G309400	RNA-binding protein	Transcriptional regulation	Hglycines
+Glyma.08G319900	Pyridoxal phosphate-dependent enzyme	Unknown	Hglycines
+Glyma.09G043400	LEA protein	Oxidative stress	Hglycines
+Glyma.09G047200	Plasma-membrane associated cation-binding protein 1	Signaling	Hglycines
+Glyma.09G049100	Cytochrome P450	Oxidative stress	Hglycines
+Glyma.09G052600	Metalloprotease	Signaling	Hglycines
+Glyma.09G057100	Peroxidase	Oxidative stress	Hglycines
+Glyma.09G060200	bHLH transcription factor	Transcriptional regulation	Hglycines
+Glyma.09G245300	MYB transcription factor	Transcriptional regulation	Hglycines
+Glyma.09G245800	AT-hook transcription factor	Transcriptional regulation	Hglycines
+Glyma.09G265500	Serine/threonine protein kinase	Signaling	Hglycines
+Glyma.09G269600	NAD(P)-binding Rossmann-fold superfamily protein	Phytohormone metabolism	Hglycines
+Glyma.10G075500	Cell wall organization-related protein	Physical barrier	Hglycines
+Glyma.10G075600	Cell wall organization-related protein	Physical barrier	Hglycines
+Glyma.10G081700	HOX transcription factor	Transcriptional regulation	Hglycines
+Glyma.10G147700	Universal stress protein family	Signaling	Hglycines
+Glyma.10G153000	Transcription factor	Transcriptional regulation	Hglycines
+Glyma.10G177200	Chlorophyll A/B-binding protein	Oxidative stress	Hglycines
+Glyma.10G183200	Cytidinediphosphate diacylglycerol	Signaling	Hglycines
+Glyma.10G183500	Peroxisomal membrane protein	Oxidative stress	Hglycines
+Glyma.10G188400	AT-hook transcription factor	Transcriptional regulation	Hglycines
+Glyma.10G189300	X-box transcription factor	Transcriptional regulation	Hglycines
+Glyma.10G189500	RNA-binding protein	Transcriptional regulation	Hglycines
+Glyma.10G192900	Glutathione S-transferase	Oxidative stress	Hglycines
+Glyma.10G200700	Acetylglucosaminyltransferase (GH47)	Physical barrier	Hglycines
+Glyma.10G209000	RNA-binding protein	Transcriptional regulation	Hglycines
+Glyma.10G214700	Cytosolic invertase	Signaling	Hglycines
+Glyma.10G221100	Aquaporin	Oxidative stress	Hglycines
+Glyma.10G227700	Chitinase	Direct function	Hglycines
+Glyma.11G119000	Protein of unknown function	Unknown	Hglycines
+Glyma.11G119100	BUP domain	Signaling	Hglycines
+Glyma.11G120400	Lipid-transfer protein	Direct function	Hglycines
+Glyma.11G120900	4-hydroxy-3-methylbut-2-enyl diphosphate reductase	Oxidative stress	Hglycines
+Glyma.11G139500	Protein phosphatase 2C	Signaling	Hglycines
+Glyma.11G144000	Disease resistance-responsive protein, enhanced suberin	Physical barrier	Hglycines
+Glyma.11G147600	LEA protein-related	Oxidative stress	Hglycines
+Glyma.11G147700	LEA protein-related	Oxidative stress	Hglycines
+Glyma.11G215500	Glutamine synthetase	Signaling	Hglycines
+Glyma.11G216300	Histone H1/H5	Transcriptional regulation	Hglycines
+Glyma.11G220000	DVL family	Unknown	Hglycines
+Glyma.11G220400	RING zinc-finger protein, ubiquitination-related	Signaling	Hglycines
+Glyma.11G223200	Tyrosine kinase	Signaling	Hglycines
+Glyma.11G229100	Alpha-beta hydrolase	Unknown	Hglycines
+Glyma.11G233300	ABA sensor, ABA-dependent regulator of protein phosphatase	Signaling	Hglycines
+Glyma.11G234600	Amino acid transporter	Transport	Hglycines
+Glyma.11G235500	Haloacid dehalogenase-like hydrolase	Oxidative stress	Hglycines
+Glyma.11G235600	Domain of unknown function	Unknown	Hglycines
+Glyma.11G240900	LRR-RK	Recognition	Hglycines
+Glyma.11G250500	Rubber elongation factor	Unknown	Hglycines
+Glyma.12G194100	Glutamate receptor	Signaling	Hglycines
+Glyma.12G196600	Plastocyanin-like domain	Oxidative stress	Hglycines
+Glyma.12G199400	Plastoquinol-plastocyanin reductase	Oxidative stress	Hglycines
+Glyma.12G203300	pre-mRNA splicing factor	Transcriptional regulation	Hglycines
+Glyma.12G208900	Clavata3 peptide	Signaling	Hglycines
+Glyma.12G210400	14-3-3 protein, cell wall organization-related	Physical barrier	Hglycines
+Glyma.12G210600	Phosphoenolpyruvate carboxylase	Unknown	Hglycines
+Glyma.12G210800	Domain of unknown function	Unknown	Hglycines
+Glyma.12G222500	AMP-activated protein kinase	Signaling	Hglycines
+Glyma.12G226200	Serine/threonine protein kinase	Signaling	Hglycines
+Glyma.13G004400	Zinc transporter	Transport	Hglycines
+Glyma.13G005500	Bifunctional protease inhibitor/lipid-transfer protein	Direct function	Hglycines
+Glyma.13G149100	Sulfite exporter	Transport	Hglycines
+Glyma.13G163700	NAP ABC transporter, Fe-S complex assembly	Transport	Hglycines
+Glyma.13G169900	HD-zip transcription factor	Transcriptional regulation	Hglycines
+Glyma.13G178700	Extensin family protein	Physical barrier	Hglycines
+Glyma.13G181000	Asparagine synthetase	Oxidative stress	Hglycines
+Glyma.13G187100	Phosphatase 2a protein	Signaling	Hglycines
+Glyma.13G187800	SAC3 family	Unknown	Hglycines
+Glyma.13G191400	Sulfotransferase 2A, acting on 12-hydroxyjasmonic acid	Phytohormone metabolism	Hglycines
+Glyma.13G196200	Aspartyl protease	Signaling	Hglycines
+Glyma.13G205000	Protein of unknown function	Unknown	Hglycines
+Glyma.13G217700	Protein of unknown function	Unknown	Hglycines
+Glyma.13G220900	Early-responsive to dehydration (ERD4) protein	Oxidative stress	Hglycines
+Glyma.14G028100	MAP kinase	Signaling	Hglycines
+Glyma.14G031800	Photosystem II subunit P-1, calcium-binding	Oxidative stress	Hglycines
+Glyma.14G038200	Cysteine-type endopeptidase inhibitor	Direct function	Hglycines
+Glyma.14G201700	Peroxidase	Oxidative stress	Hglycines
+Glyma.14G216100	LRR-RK	Recognition	Hglycines
+Glyma.15G127400	Cysteine- desulfurase	Oxidative stress	Hglycines
+Glyma.15G134400	Phosphatidylinositol transfer protein	Signaling	Hglycines
+Glyma.15G152900	C2 domain-containg protein	Unknown	Hglycines
+Glyma.15G158900	Metalloprotease	Signaling	Hglycines
+Glyma.15G253700	Photosystem II subunit R	Oxidative stress	Hglycines
+Glyma.15G263600	pre-mRNA splicing factor	Transcriptional regulation	Hglycines
+Glyma.16G051800	NAC transcription factor	Transcriptional regulation	Hglycines
+Glyma.16G053900	TCP transcription factor	Transcriptional regulation	Hglycines
+Glyma.16G060800	Germin-like protein	Signaling	Hglycines
+Glyma.16G060900	Germin-like protein	Signaling	Hglycines
+Glyma.16G072000	2OG-Fe(II) oxygenase	Oxidative stress	Hglycines
+Glyma.17G008000	Cytochrome b-561/ferric reductase transmembrane domains	Oxidative stress	Hglycines
+Glyma.17G009800	2OG-Fe(II) oxygenase	Oxidative stress	Hglycines
+Glyma.17G019300	Copper amine oxidase	Oxidative stress	Hglycines
+Glyma.17G037600	Ubiquitin protein ligase	Signaling	Hglycines
+Glyma.18G022400	Amino acid transporter	Transport	Hglycines
+Glyma.18G055500	Peroxidase	Oxidative stress	Hglycines
+Glyma.18G056400	Senescence-associated protein	Unknown	Hglycines
+Glyma.18G077500	Y-box transcription factor	Transcriptional regulation	Hglycines
+Glyma.18G103700	Cysteine-type endopeptidase inhibitor	Direct function	Hglycines
+Glyma.18G191800	Bifunctional protease inhibitor/lipid-transfer protein	Direct function	Hglycines
+Glyma.18G192000	HSP20 chaperones	Translational regulation	Hglycines
+Glyma.18G201100	Isoamyl acetate-hydrolyzing esterase	Signaling	Hglycines
+Glyma.19G000200	Ferredoxin-thioredoxin reductase	Oxidative stress	Hglycines
+Glyma.19G001000	Copper transporter	Transport	Hglycines
+Glyma.19G007800	Serine protease	Signaling	Hglycines
+Glyma.19G010100	HD-zip transcription factor	Transcriptional regulation	Hglycines
+Glyma.19G011600	Nodulin MtN21 /EamA-like transporter	Transport	Hglycines
+Glyma.19G011700	Peroxidase	Oxidative stress	Hglycines
+Glyma.19G013800	Ferredoxin-thioredoxin reductase	Oxidative stress	Hglycines
+Glyma.19G016000	Protein of unknown function	Unknown	Hglycines
+Glyma.19G109000	Hydroxyproline-rich glycoprotein	Physical barrier	Hglycines
+Glyma.19G122700	MYB transcription factor	Transcriptional regulation	Hglycines
+Glyma.19G129300	Dual specificity phosphatase	Signaling	Hglycines
+Glyma.19G161100	Auxin-inducible protein	Unknown	Hglycines
+Glyma.19G186100	Aquaporin	Oxidative stress	Hglycines
+Glyma.19G189100	Ubiquitin protein ligase	Signaling	Hglycines
+Glyma.19G193800	AN1-type zinc-finger	Transcriptional regulation	Hglycines
+Glyma.19G204400	Serine/threonine protein phosphatase	Signaling	Hglycines
+Glyma.19G219500	Boron transporter	Transport	Hglycines
+Glyma.19G228700	Universal stress protein family	Signaling	Hglycines
+Glyma.19G230300	Wall-associated receptor kinase	Recognition	Hglycines
+Glyma.19G234100	Histone H2A	Transcriptional regulation	Hglycines
+Glyma.20G010900	2OG-Fe(II) oxygenase	Oxidative stress	Hglycines
+Glyma.20G017900	Polyketide cyclase/dehydrase and lipid transport	Direct function	Hglycines
+Glyma.20G020900	Phloem protein 2	Unknown	Hglycines
+Glyma.20G030300	Transmembrane protein	Unknown	Hglycines
+Glyma.20G033800	Nitrate, fromate, iron dehydrogenase, cell wall-organization	Physical barrier	Hglycines
+Glyma.20G082800	Splicing factor 3b	Transcriptional regulation	Hglycines
+Glyma.20G096100	bHLH transcription factor	Transcriptional regulation	Hglycines
+Glyma.20G100400	Oligopeptidase	Signaling	Hglycines
+Glyma.20G105800	Chaperone	Translational regulation	Hglycines
+Glyma.20G106600	Protein of unknown function	Unknown	Hglycines
+Glyma.20G178900	Ubiquitin-conjugating enzyme E2C	Signaling	Hglycines
+Glyma.20G212900	Chlorophyll A/B-binding protein	Oxidative stress	Hglycines
+Glyma.20G213700	O-methyltransferase	Transcriptional regulation	Hglycines
+Glyma.20G214200	Peroxidase	Oxidative stress	Hglycines
+Glyma.20G215500	Protein of unknown function	Unknown	Hglycines

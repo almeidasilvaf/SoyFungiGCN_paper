@@ -1,0 +1,90 @@
+---
+title: "Counting favorable alleles in the USDA germplasm"
+author: "Fabrício Almeida-Silva"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=TRUE,
+                      warning = FALSE, 
+                      message = FALSE,
+                      tidy.opts = list(width.cutoff=60),
+                      tidy = TRUE)
+```
+
+
+## Selecting most promising accessions
+
+To select the most promising cultivars, we will score them based on the number of favorable alleles.
+
+
+```{r select_accessions}
+snps_and_effects <- as.data.frame(
+    read_tsv(here("products", "result_files", "snps_and_effects.txt"))
+)
+vcf <- read.table(here("products", "result_files", "filtered_soysnp50k_final.txt"),
+                  header=TRUE, comment.char="")
+vcf <- vcf[!duplicated(vcf$ID), ]
+    
+#----Define functions to select accessions----
+#' Select promising accessions
+#' 
+#' @param vcf VCF file.
+#' @param snp_effects Data frame with 2 columns: 
+#' 'SNP', with SNP IDs, and 'Effect', with effect sizes.
+#' @param top Numeric indicating the number of top accessions to report. 
+#' Default: 5.
+select_accessions <- function(vcf, snp_effects, top=5) {
+    
+    mvcf_pos <- vcf[vcf$ID %in% snp_effects$SNP[snp_effects$Effect > 0],-c(1:9)]
+    mvcf_neg <- vcf[vcf$ID %in% snp_effects$SNP[snp_effects$Effect < 0],-c(1:9)]
+    # Positive effect
+    mvcf_pos[mvcf_pos == "1/1"] <- 2
+    mvcf_pos[mvcf_pos == "0/1"] <- 1
+    mvcf_pos[mvcf_pos == "0/0"] <- 0
+    # Negative effect
+    mvcf_neg[mvcf_neg == "1/1"] <- 0
+    mvcf_neg[mvcf_neg == "0/1"] <- 1
+    mvcf_neg[mvcf_neg == "0/0"] <- 2
+    # Combine
+    final_vcf <- rbind(mvcf_neg, mvcf_pos)
+    final_vcf[final_vcf == "./."] <- NA
+
+    final_vcf <- apply(final_vcf, 2, as.numeric)
+    counts <- sort(colSums(final_vcf), decreasing = TRUE)
+    best <- data.frame(
+        Accession = names(counts[seq_len(top)]),
+        Score = counts[seq_len(top)]
+    )
+    return(best)
+}
+
+#----A. glycines----
+aglycines_accessions <- select_accessions(
+    vcf, snps_and_effects[snps_and_effects$Species == "Aglycines", ], top=10
+)
+max_agl <- 2*nrow(snps_and_effects[snps_and_effects$Species == "Aglycines", ])
+aglycines_accessions$Potential <- aglycines_accessions$Score / max_agl
+aglycines_accessions$Species <- "Aglycines"
+
+#----H. glycines----
+hglycines_accessions <- select_accessions(
+    vcf, snps_and_effects[snps_and_effects$Species == "Hglycines", ], top=10
+)
+max_hgl <- 2*nrow(snps_and_effects[snps_and_effects$Species == "Hglycines", ])
+hglycines_accessions$Potential <- hglycines_accessions$Score / max_hgl
+hglycines_accessions$Species <- "Hglycines"
+
+write_tsv(rbind(aglycines_accessions, hglycines_accessions), 
+          file = here("products", "tables", "best_accessions_and_potential.txt"))
+```
+
+## Session information
+
+This document was created under the following conditions:
+
+```{r session_info}
+sessionInfo()
+```
+

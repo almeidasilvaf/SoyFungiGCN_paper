@@ -1,0 +1,244 @@
+---
+title: "Prioritizing candidates for nematodes"
+author: "Fabrício Almeida-Silva"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=TRUE,
+                      warning=FALSE, 
+                      message=FALSE,
+                      tidy.opts=list(width.cutoff=60),
+                      tidy=TRUE)
+```
+
+## Candidate gene mining
+
+Now, we will mine candidate genes with {cageminer}. To start, let's get the guide genes.
+
+```{r load_data}
+library(ggplot2)
+library(here)
+library(cageminer)
+library(tidyverse)
+
+# Load SNP ranges
+load(here("products", "result_files", "snp_granges.rda"))
+
+# Create a gene-based GRanges object
+gff <- rtracklayer::import(here("data", "PLAZA_selected.transcripts.gff.gz"))
+gff_gene <- gff[gff$type == "gene", ]
+rm(gff)
+```
+
+```{r get_guides}
+#----Get biotic stress-related genes from Almeida-Silva e Venancio 2021----
+guides <- readr::read_tsv("https://raw.githubusercontent.com/almeidasilvaf/SoyFungi_GWAS_GCN/main/products/tables/sup_table3.tsv")
+```
+
+Find high-confidence candidates for nematodes.
+
+```{r nematodes}
+library(BioNERO)
+library(SummarizedExperiment)
+set.seed(1)
+
+#----Load and filter expression data----
+load("~/Dropbox/Atlas/atlasv2_tpm.rda")
+exp_nematode <- atlas_tpm[, atlas_tpm$Pathogen %in% "Hglycines"]
+rm(atlas_tpm)
+
+#----Infer GCNs for nematodes----
+exp_nematode <- exp_preprocess(exp_nematode, min_exp=5, Zk_filtering=FALSE)
+metadata_nematode <- colData(exp_nematode) %>%
+  as.data.frame() %>%
+  mutate(Pathogen = str_sub(Pathogen, 1, 3)) %>%
+  mutate(annot = paste(Pathogen, Sample_description, sep = "_")) %>%
+  select(annot)
+colData(exp_nematode) <- DataFrame(metadata_nematode)
+
+sft_nematode <- SFT_fit(exp_nematode, net_type="unsigned", cor_method="pearson")
+gcn_nematode <- exp2gcn(exp_nematode, net_type="unsigned", cor_method="pearson",
+                     SFTpower=sft_nematode$power)
+
+# Cleaning up
+source(here::here("code", "utils.R"))
+workspace_size()
+gcn_nematode$adjacency_matrix <- NULL
+gcn_nematode$dendro_plot_objects <- NULL
+gcn_nematode$moduleColors <- NULL
+gcn_nematode$correlation_matrix <- round(gcn_nematode$correlation_matrix, 2)
+
+#----Mine candidates----
+# Heterodera glycines
+conditions_hgl <- c(
+  "Hgl_stress_20days", "Hgl_stress_15days", "Hgl_stress_10days",
+  "Hgl_stress_virulent"
+)
+mining_hglycines <- mine_candidates(
+  gene_ranges = gff_gene, 
+  marker_ranges = snp_grangeslist$Hglycines,
+  exp = exp_nematode,
+  gcn = gcn_nematode,
+  guides = guides,
+  metadata = metadata_nematode,
+  sample_group = conditions_hgl, 
+  min_cor = 0.4
+)
+length(unique(mining_hglycines$gene))
+
+# Save mined candidates
+save(mining_hglycines, 
+     file = here("products", "result_files", "hglycines_minedcand.rda"),
+     compress="xz")
+```
+
+Now, let's score genes using cageminer's scoring function.
+
+```{r scoring}
+cand_unique <- list(
+  Hglycines = unique(mining_hglycines$gene)
+)
+
+#----Get candidates that are hubs----
+hubs <- get_hubs_gcn(exp_nematode, gcn_nematode)
+candidates_hubs <- lapply(cand_unique, function(x) {
+  return(hubs[hubs$Gene %in% x, ])
+})
+
+#----Get candidates that are TFs----
+tfs <- as.data.frame(readr::read_tsv("http://planttfdb.gao-lab.org/download/TF_list/Gma_TF_list.txt.gz"))[, c(2,3)]
+candidates_tfs <- lapply(cand_unique, function(x) {
+  y <- tfs[tfs$Gene_ID %in% x, ]
+  return(y)
+})
+
+#----Score genes----
+hubs <- hubs$Gene
+tfs <- tfs$Gene_ID
+
+hglycines_score <- score_genes(mining_hglycines, hubs, tfs)
+
+#----Export best candidates as a table----
+dfexport_candidates <- rbind(
+  hglycines_score %>% mutate(species = "H. glycines") %>% select(1,5,6)
+)
+
+write_tsv(dfexport_candidates, 
+          file = here("products", "tables", "top_candidates_nematodes.tsv"))
+```
+
+Exporting descriptions for mined candidates.
+
+```{r description}
+gmax_des <- readr::read_tsv("https://ftp.psb.ugent.be/pub/plaza/plaza_public_dicots_05/Descriptions/gene_description.gma.csv.gz", skip=8)
+names(gmax_des) <- c("Gene", "description_type", "description")
+
+cand_description <- Reduce(rbind, list(
+  hglycines = gmax_des[gmax_des$Gene %in% cand_unique$Hglycines, ] %>%
+    mutate(species = "Hglycines")
+))
+write_tsv(cand_description, 
+          file = here("products", "tables",
+                      "mined_candidates_nematodes_description.tsv"))
+```
+
+
+## Export module enrichment and network file for shiny app development
+
+```{r export_files}
+options(timeout = 600)
+
+# Get GO annotation
+go_annotation <- as.data.frame(
+  readr::read_tsv("https://ftp.psb.ugent.be/pub/plaza/plaza_public_dicots_05/GO/go.gma.csv.gz", skip=8)
+)
+go_annotation <- go_annotation[, c(1,8)]
+names(go_annotation) <- c("Gene", "GO_description")
+
+# Get Interpro annotation
+interpro_annotation <- as.data.frame(
+  readr::read_tsv("https://ftp.psb.ugent.be/pub/plaza/plaza_public_dicots_05/InterPro/interpro.gma.csv.gz", skip=8)
+)
+interpro_annotation <- interpro_annotation[, c(1,4)]
+
+# Get MapMan annotation
+mapman <- readr::read_tsv("https://ftp.psb.ugent.be/pub/plaza/plaza_public_dicots_05/MapMan/mapman.gma.csv.gz", skip=8)
+mapman_annotation <- as.data.frame(mapman[, c(3,5)])
+names(mapman_annotation) <- c("Gene", "Description")
+
+enrich_mapman <- module_enrichment(
+       net = gcn_nematode,
+       background_genes = rownames(exp_nematode),
+       mapman_annotation
+)
+
+enrich_go <- module_enrichment(
+       net = gcn_nematode,
+       background_genes = rownames(exp_nematode),
+       go_annotation
+)
+
+enrich_interpro <- module_enrichment(
+       net = gcn_nematode,
+       background_genes = rownames(exp_nematode),
+       interpro_annotation
+)
+
+enrichment_results <- Reduce(rbind, list(
+  mapman = enrich_mapman[, c(1,5,7)] %>% mutate(Category = "MapMan"),
+  go = enrich_go[, c(1,5,7)] %>% mutate(Category = "GO"),
+  interpro = enrich_interpro[, c(1,5,7)] %>% mutate(Category = "Interpro")
+))
+
+
+genes_modules <- gcn_nematode$genes_and_modules
+genes_modules <- genes_modules[genes_modules$Modules != "grey", ]
+degree <- gcn_nematode$kIN
+
+edges <- lapply(unique(genes_modules$Modules), function(x) {
+  y <- get_edge_list(gcn_nematode, module = x, filter=TRUE,
+                     method="min_cor", rcutoff = 0.4)
+  return(y)
+})
+names(edges) <- unique(genes_modules$Modules)
+
+greygenes <- genes_modules[genes_modules$Modules == "grey", 1]
+cor_matrix <- gcn_nematode$correlation_matrix
+cor_matrix[cor_matrix < 0.2 & cor_matrix > -0.2] <- NA
+rm(gcn_nematode)
+edgelist <- cormat_to_edgelist(cor_matrix)
+
+# Export files
+save(enrichment_results, 
+     file = here("products", "result_files", "shiny_nematode_enrichment.rda"),
+     compress = "xz")
+
+save(genes_modules, 
+     file = here("products", "result_files", "shiny_nematode_gmodules.rda"), 
+     compress="xz")
+
+save(degree, 
+     file = here("products", "result_files", "shiny_nematode_degree.rda"), 
+     compress="xz")
+
+save(edgelist, 
+     file = here("products", "result_files", "shiny_nematode_edgelists.rda"), 
+     compress="xz")
+
+save(hubs, 
+     file = here("products", "result_files", "shiny_nematode_hubs.rda"), 
+     compress="xz")
+```
+
+## Session information
+
+This document was created under the following conditions:
+
+```{r session_info} 
+sessionInfo()
+```
+
+
+

@@ -1,0 +1,121 @@
+---
+title: "Summary stats of prioritized candidates"
+author: "Fabrício Almeida-Silva"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      warning = FALSE, 
+                      message = FALSE,
+                      tidy.opts = list(width.cutoff = 60),
+                      tidy = TRUE)
+```
+
+## Functional classification of candidates
+
+The file "all_mined_candidates" was manually modified to include descriptions for all genes and their role in plant defense. Let's plot data now.
+
+```{r candidate_classification_stats}
+library(tidyverse)
+library(here)
+cpal <- c("darkgoldenrod3", "dimgrey", "darkgreen")
+
+all_cand_des <- read.csv(here("products", "tables",
+                              "all_mined_candidates_and_description.txt"),
+                         header=TRUE, sep="\t")
+
+freq_abs_cand <- all_cand_des %>%
+  janitor::tabyl(Role, Species) %>%
+  mutate(Role = stringr::str_replace_all(Role, "SM metabolism", 
+                                         "Specialized metabolism")) %>%
+  reshape2::melt()
+
+freq_cand <- freq_abs_cand %>%
+  group_by(variable) %>%
+  mutate(percentage = value / sum(value))
+
+p_cand <- ggplot(freq_cand) +
+  geom_bar(aes(x=percentage, y=Role, fill = variable), stat="identity",
+           show.legend=FALSE) +
+  ggplot2::scale_fill_manual(values = cpal) +
+  facet_wrap(~variable, ncol=5) +
+  theme_bw() +
+  labs(x="Relative frequency", y="",
+       title="Immunity-related classification of candidate resistance genes per species")
+
+ggsave(filename = here("products", "plots", "candidates_classification.png"),
+       p_cand, width = 9, height=3)
+
+# Combine figures
+library(magick)
+library(patchwork)
+f1 <- magick::image_read(here("products", "plots", "biorender_plant_defense_to_pests.png"))
+f2 <- magick::image_read(here("products", "plots", "candidates_classification.png"))
+
+final_fig <- image_append(c(image_scale(f1, "2700x2020!"), f2), 
+                          stack=TRUE)
+magick::image_write(final_fig, 
+                    path = here("products", "plots", "candidates_classification_final.png"))
+```
+
+Show candidates in a Venn Diagram.
+
+```{r venn_plot}
+# Load data
+load(here("products", "result_files", "aglycines_minedcand.rda"))
+load(here("products", "result_files", "hglycines_minedcand.rda"))
+load(here("products", "result_files", "slitura_minedcand.rda"))
+
+
+venn_pdata <- list(
+  Aglycines = unique(mining_aglycines$gene),
+  Slitura = unique(mining_slitura$gene),
+  Hglycines = unique(mining_hglycines$gene)
+)
+
+# Plot venn diagram using the VennDiagram package
+library(VennDiagram)
+venn.diagram(
+        x = venn_pdata,
+        category.names = c("A. glycines" , "S. litura", "H. glycines"),
+        filename = here("products", "plots", "venn_diagram_candidates.png"),
+        output=TRUE,
+        
+        # Output features
+        imagetype="png" ,
+        height = 1600, 
+        width = 1600, 
+        resolution = 600,
+        
+        # Circles
+        lwd = 2,
+        lty = 'blank',
+        fill = cpal,
+        
+        # Numbers
+        cex = 0.5,
+        fontface = "bold",
+        fontfamily = "sans",
+        
+        # Set names
+        cat.cex = 0.5,
+        cat.fontface = "italic",
+        cat.default.pos = "outer",
+        cat.fontfamily = "sans",
+        margin = 0.2
+)
+```
+
+
+## Session information
+
+This document was created under the following conditions:
+
+```{r session_info} 
+sessionInfo()
+```
+
+
+

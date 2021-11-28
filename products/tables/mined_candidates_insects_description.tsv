@@ -1,0 +1,157 @@
+Gene	description_type	description	species
+Glyma.01G025100	description	PTHR36321:SF1 - CLASSICAL ARABINOGALACTAN PROTEIN 10-RELATED	Aglycines
+Glyma.01G025600	description	PTHR23155:SF516 - PLANT INTRACELLULAR RAS-GROUP-RELATED LRR PROTEIN 1-RELATED	Aglycines
+Glyma.01G210200	description	PTHR10969//PTHR10969:SF40 - MICROTUBULE-ASSOCIATED PROTEINS 1A/1B LIGHT CHAIN 3-RELATED // SUBFAMILY NOT NAMED	Aglycines
+Glyma.01G213300	description	PF10693 - Protein of unknown function (DUF2499) (DUF2499)	Aglycines
+Glyma.01G214600	description	PTHR31750//PTHR31750:SF4 - FAMILY NOT NAMED // PROTEIN STAY-GREEN 1, CHLOROPLASTIC-RELATED	Aglycines
+Glyma.01G226700	description	K03404 - magnesium chelatase subunit D (chlD, bchD)	Aglycines
+Glyma.01G227400	description	PTHR11557:SF0 - PORPHOBILINOGEN DEAMINASE	Aglycines
+Glyma.01G238800	description	PTHR23500:SF70 - SUGAR TRANSPORT PROTEIN 13	Aglycines
+Glyma.02G061100	description	K02716 - photosystem II oxygen-evolving enhancer protein 1 (psbO)	Aglycines
+Glyma.02G073000	description	PTHR21087//PTHR21087:SF4 - SHIKIMATE KINASE // INACTIVE SHIKIMATE KINASE LIKE 1, CHLOROPLASTIC-RELATED	Aglycines
+Glyma.04G054100	description	PTHR10108//PTHR10108:SF791 - METHYLTRANSFERASE // (S)-COCLAURINE-N-METHYLTRANSFERASE-RELATED	Aglycines
+Glyma.04G056000	description	K02221 - YggT family protein (yggT)	Aglycines
+Glyma.04G057100	description	PF07911 - Protein of unknown function (DUF1677) (DUF1677)	Aglycines
+Glyma.04G064100	description	PTHR11850:SF122 - HOMEOBOX PROTEIN KNOTTED-1-LIKE 3-RELATED	Aglycines
+Glyma.04G072300	description	PTHR31407//PTHR31407:SF7 - FAMILY NOT NAMED // PSBP DOMAIN-CONTAINING PROTEIN 5, CHLOROPLASTIC	Aglycines
+Glyma.04G076900	description	PTHR13871//PTHR13871:SF38 - THIOREDOXIN // PROTEIN C32D5.8, ISOFORM B-RELATED	Aglycines
+Glyma.04G085500	description	PTHR11614:SF96 - ALPHA/BETA FOLD HYDROLASE FAMILY PROTEIN	Aglycines
+Glyma.04G088800	description	PF00069//PF07714//PF08263 - Protein kinase domain (Pkinase) // Protein tyrosine kinase (Pkinase_Tyr) // Leucine rich repeat N-terminal domain (LRRNT_2)	Aglycines
+Glyma.04G089800	description	1.2.1.70 - Glutamyl-tRNA reductase	Aglycines
+Glyma.05G135900	description	PTHR31142//PTHR31142:SF3 - FAMILY NOT NAMED // PROTEIN TOM THREE HOMOLOG 1-RELATED	Aglycines
+Glyma.05G139800	description	PF10716 - NADH dehydrogenase transmembrane subunit (NdhL)	Aglycines
+Glyma.05G144300	description	PTHR15315:SF35 - F21J9.10	Aglycines
+Glyma.05G146300	description	PTHR22849:SF8 - U-BOX DOMAIN-CONTAINING PROTEIN 45-RELATED	Aglycines
+Glyma.05G154700	description	PF04398 - Protein of unknown function, DUF538 (DUF538)	Aglycines
+Glyma.05G166300	description	PTHR10903//PTHR10903:SF39 - GTPASE, IMAP FAMILY MEMBER-RELATED // TRANSLOCASE OF CHLOROPLAST 159, CHLOROPLASTIC	Aglycines
+Glyma.06G269500	description	PTHR10388//PTHR10388:SF18 - EUKARYOTIC TRANSLATION INITIATION FACTOR SUI1 // PROTEIN TRANSLATION FACTOR SUI1 HOMOLOG 1-RELATED	Aglycines
+Glyma.06G269600	description	PTHR10388//PTHR10388:SF18 - EUKARYOTIC TRANSLATION INITIATION FACTOR SUI1 // PROTEIN TRANSLATION FACTOR SUI1 HOMOLOG 1-RELATED	Aglycines
+Glyma.06G277600	description	K02116 - ATP synthase protein I (atpI)	Aglycines
+Glyma.06G290000	description	PF00847 - AP2 domain (AP2)	Aglycines
+Glyma.07G002100	description	PF04755 - PAP_fibrillin (PAP_fibrillin)	Aglycines
+Glyma.07G006600	description	PTHR33510:SF6 - PROTEIN TIC 20-I, CHLOROPLASTIC	Aglycines
+Glyma.07G021800	description	PTHR24078 - DNAJ HOMOLOG SUBFAMILY C MEMBER	Aglycines
+Glyma.07G022000	description	PF02298 - Plastocyanin-like domain (Cu_bind_like)	Aglycines
+Glyma.07G022700	description	PTHR31096//PTHR31096:SF16 - FAMILY NOT NAMED // ACT DOMAIN-CONTAINING PROTEIN	Aglycines
+Glyma.07G023500	description	PF00069//PF03822//PF14531 - Protein kinase domain (Pkinase) // NAF domain (NAF) // Kinase-like (Kinase-like)	Aglycines
+Glyma.07G033100	description	K03301 - ATP:ADP antiporter, AAA family (TC.AAA)	Aglycines
+Glyma.07G034400	description	PF13964 - Kelch motif (Kelch_6)	Aglycines
+Glyma.07G036400	description	K00679 - phospholipid:diacylglycerol acyltransferase (E2.3.1.158)	Aglycines
+Glyma.07G049100	description	PTHR11969//PTHR11969:SF29 - MAX DIMERIZATION, MAD // TRANSCRIPTION FACTOR BHLH57-RELATED	Aglycines
+Glyma.07G049600	description	K00161 - pyruvate dehydrogenase E1 component alpha subunit (PDHA, pdhA)	Aglycines
+Glyma.07G056600	description	PTHR24031:SF265 - DEAD-BOX ATP-DEPENDENT RNA HELICASE 25-RELATED	Aglycines
+Glyma.07G066700	description	K18586 - ubiquinone biosynthesis protein COQ4 (COQ4)	Aglycines
+Glyma.07G100500	description	PTHR10353:SF28 - BETA-GLUCOSIDASE 43-RELATED	Aglycines
+Glyma.07G102100	description	PTHR23111//PTHR23111:SF40 - ZINC FINGER PROTEIN // SUBFAMILY NOT NAMED	Aglycines
+Glyma.07G114900	description	PTHR10746//PTHR10746:SF10 - 50S RIBOSOMAL PROTEIN L4 // 50S RIBOSOMAL PROTEIN L4, CHLOROPLASTIC	Aglycines
+Glyma.07G117400	description	2.7.11.1 - Non-specific serine/threonine protein kinase / Threonine-specific protein kinase	Aglycines
+Glyma.07G178600	description	PTHR24343:SF162 - SERINE/THREONINE-PROTEIN KINASE SRK2E	Aglycines
+Glyma.07G181800	description	PTHR33787//PTHR33787:SF4 - FAMILY NOT NAMED // YCF20-LIKE PROTEIN	Aglycines
+Glyma.07G198500	description	K02988 - small subunit ribosomal protein S5 (RP-S5, MRPS5, rpsE)	Aglycines
+Glyma.07G198700	description	PF08576 - Eukaryotic protein of unknown function (DUF1764) (DUF1764)	Aglycines
+Glyma.08G156500	description	PTHR31989:SF14 - NAC DOMAIN CONTAINING PROTEIN 103	Aglycines
+Glyma.08G158600	description	PTHR11328//PTHR11328:SF28//PTHR11328:SF34 - MAJOR FACILITATOR SUPERFAMILY DOMAIN-CONTAINING PROTEIN // MAJOR FACILITATOR SUPERFAMILY DOMAIN-CONTAINING PROTEIN 12 // SUBFAMILY NOT NAMED	Aglycines
+Glyma.08G160700	description	PTHR31446:SF2 - ACID PHOSPHATASE/VANADIUM-DEPENDENT HALOPEROXIDASE-RELATED PROTEIN	Aglycines
+Glyma.08G175900	description	PTHR11353//PTHR11353:SF8 - CHAPERONIN // CHAPERONIN 60 SUBUNIT BETA 1, CHLOROPLASTIC-RELATED	Aglycines
+Glyma.08G185800	description	PF04755 - PAP_fibrillin (PAP_fibrillin)	Aglycines
+Glyma.08G238300	description	PTHR12899//PTHR12899:SF7 - 39S RIBOSOMAL PROTEIN L18, MITOCHONDRIAL // SUBFAMILY NOT NAMED	Aglycines
+Glyma.08G283700	description	K08244 - alpha-glucan, water dikinase (E2.7.9.4)	Aglycines
+Glyma.08G285100	description	3.4.17.23 - Angiotensin-converting enzyme 2 / Angiotensin converting enzyme-2	Aglycines
+Glyma.08G288400	description	PTHR30540//PTHR30540:SF4 - OSMOTIC STRESS POTASSIUM TRANSPORTER // POTASSIUM TRANSPORTER 12-RELATED	Aglycines
+Glyma.08G297200	description	PTHR31745//PTHR31745:SF2 - FAMILY NOT NAMED // SINGLE-STRANDED DNA-BINDING PROTEIN WHY1, CHLOROPLASTIC-RELATED	Aglycines
+Glyma.09G003900	description	PTHR10969:SF43 - AUTOPHAGY-RELATED PROTEIN 8A-RELATED	Aglycines
+Glyma.09G005700	description	PF03106 - WRKY DNA -binding domain (WRKY)	Aglycines
+Glyma.09G024700	description	PF07714//PF11721 - Protein tyrosine kinase (Pkinase_Tyr) // Di-glucose binding within endoplasmic reticulum (Malectin)	Aglycines
+Glyma.09G031800	description	K02945 - small subunit ribosomal protein S1 (RP-S1, rpsA)	Aglycines
+Glyma.09G038600	description	PTHR30620//PTHR30620:SF50 - PERIPLASMIC BETA-GLUCOSIDASE-RELATED // BETA-D-XYLOSIDASE 1	Aglycines
+Glyma.09G040200	description	PTHR31875:SF6 - PROTEIN DEHYDRATION-INDUCED 19 HOMOLOG 4-RELATED	Aglycines
+Glyma.10G002200	description	PTHR23050 - CALCIUM BINDING PROTEIN	Aglycines
+Glyma.10G009800	description	PTHR13832//PTHR13832:SF165 - PROTEIN PHOSPHATASE 2C // PROTEIN PHOSPHATASE 2C 13-RELATED	Aglycines
+Glyma.10G138600	description	K00231 - oxygen-dependent protoporphyrinogen oxidase (PPOX, hemY)	Aglycines
+Glyma.10G139500	description	PTHR11071//PTHR11071:SF247 - PEPTIDYL-PROLYL CIS-TRANS ISOMERASE // PEPTIDYL-PROLYL CIS-TRANS ISOMERASE D	Aglycines
+Glyma.10G151800	description	PTHR11991 - TRANSLATIONALLY CONTROLLED TUMOR PROTEIN-RELATED	Aglycines
+Glyma.10G155400	description	PTHR11895//PTHR11895:SF39 - AMIDASE // OUTER ENVELOPE PROTEIN 64, CHLOROPLASTIC	Aglycines
+Glyma.10G162100	description	PTHR22952//PTHR22952:SF219 - CAMP-RESPONSE ELEMENT BINDING PROTEIN-RELATED // BASIC LEUCINE ZIPPER 9	Aglycines
+Glyma.10G187300	description	K03521 - electron transfer flavoprotein beta subunit (fixA, etfB)	Aglycines
+Glyma.10G191200	description	3.1.3.29 - N-acylneuraminate-9-phosphatase	Aglycines
+Glyma.10G194300	description	PTHR13697//PTHR13697:SF33 - PHOSPHOFRUCTOKINASE // 6-PHOSPHOFRUCTOKINASE 4, CHLOROPLASTIC	Aglycines
+Glyma.10G208800	description	PTHR22950//PTHR22950:SF240 - AMINO ACID TRANSPORTER // TRANSMEMBRANE AMINO ACID TRANSPORTER-RELATED	Aglycines
+Glyma.10G230600	description	PTHR22814//PTHR22814:SF129 - COPPER TRANSPORT PROTEIN ATOX1-RELATED // COPPER TRANSPORT FAMILY PROTEIN-RELATED	Aglycines
+Glyma.10G262700	description	K13692 - UDP-glucose:(indol-3-yl)acetate beta-D-glucosyltransferase [EC:2.4.1.121] Glc b1- IAA (IAGLU)	Aglycines
+Glyma.10G284600	description	KOG2985 - Uncharacterized conserved protein	Aglycines
+Glyma.10G291200	description	PTHR13748//PTHR13748:SF43 - COBW-RELATED // SUBFAMILY NOT NAMED	Aglycines
+Glyma.11G180200	description	KOG4526 - Predicted membrane protein	Aglycines
+Glyma.11G189600	description	PTHR32044//PTHR32044:SF17 - FAMILY NOT NAMED // GLUCOMANNAN 4-BETA-MANNOSYLTRANSFERASE 2	Aglycines
+Glyma.11G194500	description	PTHR24096//PTHR24096:SF213//PTHR24096:SF236 - FAMILY NOT NAMED // SUBFAMILY NOT NAMED // PROTEIN ACS-9	Aglycines
+Glyma.11G194600	description	PTHR22814:SF100 - HEAVY METAL TRANSPORT/DETOXIFICATION DOMAIN-CONTAINING PROTEIN-RELATED	Aglycines
+Glyma.11G195900	description	PTHR11353:SF11 - CHAPERONIN 60 SUBUNIT ALPHA 1, CHLOROPLASTIC	Aglycines
+Glyma.12G055400	description	PF00010 - Helix-loop-helix DNA-binding domain (HLH)	Aglycines
+Glyma.12G059600	description	PTHR14194//PTHR14194:SF38 - NITROGEN METABOLIC REGULATION PROTEIN NMR-RELATED // PROTEIN PLASTID TRANSCRIPTIONALLY ACTIVE 16	Aglycines
+Glyma.12G059900	description	PTHR23500//PTHR23500:SF159 - FAMILY NOT NAMED // D-XYLOSE-PROTON SYMPORTER-LIKE 3, CHLOROPLASTIC	Aglycines
+Glyma.12G064100	description	PTHR12428//PTHR12428:SF19 - OXA1 // INNER MEMBRANE PROTEIN ALBINO3, CHLOROPLASTIC	Aglycines
+Glyma.12G078100	description	PTHR11353:SF11 - CHAPERONIN 60 SUBUNIT ALPHA 1, CHLOROPLASTIC	Aglycines
+Glyma.12G092300	description	4.2.1.65 - 3-cyanoalanine hydratase	Aglycines
+Glyma.12G093300	description	KOG4526 - Predicted membrane protein	Aglycines
+Glyma.12G194000	description	PTHR11206//PTHR11206:SF143 - MULTIDRUG RESISTANCE PROTEIN // SUBFAMILY NOT NAMED	Aglycines
+Glyma.12G204400	description	K16900 - two pore calcium channel protein, plant (TPC1, CCH1)	Aglycines
+Glyma.12G214800	description	PF09353 - Domain of unknown function (DUF1995) (DUF1995)	Aglycines
+Glyma.12G217500	description	PTHR23050//PTHR23050:SF170 - CALCIUM BINDING PROTEIN // SUBFAMILY NOT NAMED	Aglycines
+Glyma.12G223400	description	PTHR10438//PTHR10438:SF285 - THIOREDOXIN // SUBFAMILY NOT NAMED	Aglycines
+Glyma.12G226100	description	PTHR13832:SF333 - PROTEIN PHOSPHATASE 2C 39-RELATED	Aglycines
+Glyma.13G144800	description	K00856 - adenosine kinase (E2.7.1.20, ADK)	Aglycines
+Glyma.13G145200	description	K11294 - nucleolin (NCL, NSR1)	Aglycines
+Glyma.13G167400	description	PTHR34203:SF2 - EXPRESSED PROTEIN	Aglycines
+Glyma.13G177900	description	K02988 - small subunit ribosomal protein S5 (RP-S5, MRPS5, rpsE)	Aglycines
+Glyma.13G212800	description	PTHR28242:SF5 - HISTIDINE-CONTAINING PHOSPHOTRANSFER PROTEIN 1	Aglycines
+Glyma.13G215000	description	PTHR31352//PTHR31352:SF3 - FAMILY NOT NAMED // INACTIVE BETA-AMYLASE 9	Aglycines
+Glyma.13G216800	description	PTHR11702//PTHR11702:SF20 - DEVELOPMENTALLY REGULATED GTP-BINDING PROTEIN-RELATED // GTP-BINDING PROTEIN OBGC, CHLOROPLASTIC	Aglycines
+Glyma.13G221300	description	PTHR35720:SF1 - PLASTID TRANSCRIPTIONALLY ACTIVE 12	Aglycines
+Glyma.13G224900	description	PTHR19139:SF144 - AQUAPORIN NIP1-1-RELATED	Aglycines
+Glyma.13G227000	description	PF01535//PF13041//PF13812 - PPR repeat (PPR) // PPR repeat family (PPR_2) // Pentatricopeptide repeat domain (PPR_3)	Aglycines
+Glyma.13G230600	description	PTHR14503//PTHR14503:SF3 - FAMILY NOT NAMED // 50S RIBOSOMAL PROTEIN L34, CHLOROPLASTIC	Aglycines
+Glyma.13G232500	description	K03405 - magnesium chelatase subunit I (chlI, bchI)	Aglycines
+Glyma.13G326800	description	PF01344 - Kelch motif (Kelch_1)	Aglycines
+Glyma.13G338600	description	PTHR24078 - DNAJ HOMOLOG SUBFAMILY C MEMBER	Aglycines
+Glyma.13G341500	description	PTHR27000:SF151 - DNA-DAMAGE-REPAIR/TOLERATION PROTEIN DRT100-RELATED	Aglycines
+Glyma.13G348100	description	K02218 - casein kinase 1 (CSNK1, CK1)	Aglycines
+Glyma.13G349100	description	K18121 - glyoxylate/succinic semialdehyde reductase (GLYR)	Aglycines
+Glyma.13G352500	description	2.1.1.190 - 23S rRNA (uracil(1939)-C(5))-methyltransferase / RNA uridine methyltransferase A	Aglycines
+Glyma.13G356200	description	PTHR12553//PTHR12553:SF49 - RIBONUCLEASE Z // ZINC PHOSPHODIESTERASE ELAC PROTEIN 2	Aglycines
+Glyma.14G177200	description	PTHR31356:SF6 - THYLAKOID LUMENAL 29 KDA PROTEIN, CHLOROPLASTIC	Aglycines
+Glyma.16G049000	description	PTHR36762:SF2 - A.THALIANA MRNA (ORF19) FROM CHROMOSOME III	Aglycines
+Glyma.16G050900	description	PTHR31717:SF3 - ZINC FINGER PROTEIN CONSTANS-LIKE 14-RELATED	Aglycines
+Glyma.16G053800	description	PTHR31096:SF22 - ACR6	Aglycines
+Glyma.16G057700	description	PTHR11061//PTHR11061:SF29 - RNA M5U METHYLTRANSFERASE FAMILY // SUBFAMILY NOT NAMED	Aglycines
+Glyma.16G128600	description	PF07714//PF13499//PF14531 - Protein tyrosine kinase (Pkinase_Tyr) // EF-hand domain pair (EF-hand_7) // Kinase-like (Kinase-like)	Aglycines
+Glyma.16G130900	description	3.4.14.2 - Dipeptidyl-peptidase II / Quiescent cell proline dipeptidase	Aglycines
+Glyma.17G067700	description	PTHR11638//PTHR11638:SF94 - ATP-DEPENDENT CLP PROTEASE // HEAT SHOCK PROTEIN 104	Aglycines
+Glyma.17G068200	description	PTHR14155:SF138 - GH10160P	Aglycines
+Glyma.17G069600	description	PTHR10366//PTHR10366:SF459 - NAD DEPENDENT EPIMERASE/DEHYDRATASE // SUBFAMILY NOT NAMED	Aglycines
+Glyma.17G072300	description	K02520 - translation initiation factor IF-3 (infC, MTIF3)	Aglycines
+Glyma.17G091000	description	K00128 - aldehyde dehydrogenase (NAD+) (E1.2.1.3)	Aglycines
+Glyma.17G092900	description	K10084 - ER degradation enhancer, mannosidase alpha-like 1 (EDEM1)	Aglycines
+Glyma.17G094300	description	PF01535//PF13041 - PPR repeat (PPR) // PPR repeat family (PPR_2)	Aglycines
+Glyma.17G094700	description	PTHR24351//PTHR24351:SF83 - RIBOSOMAL PROTEIN S6 KINASE // SUBFAMILY NOT NAMED	Aglycines
+Glyma.17G095000	description	PTHR12565:SF137 - TRANSCRIPTION FACTOR BHLH79	Aglycines
+Glyma.18G207900	description	PTHR23324//PTHR23324:SF57 - SEC14 RELATED PROTEIN // PATELLIN-6	Aglycines
+Glyma.19G001100	description	K02890 - large subunit ribosomal protein L22 (RP-L22, MRPL22, rplV)	Aglycines
+Glyma.19G018600	description	PTHR23070:SF44 - AAA-TYPE ATPASE FAMILY PROTEIN-RELATED	Aglycines
+Glyma.19G187100	description	K13496 - UDP-glucosyl transferase 73C [EC:2.4.1.-] Glc - brassinosteroid (UGT73C)	Aglycines
+Glyma.19G187200	description	2.4.1.203 - Trans-zeatin O-beta-D-glucosyltransferase / Zeatin O-glucosyltransferase	Aglycines
+Glyma.19G191200	description	KOG1637 - Threonyl-tRNA synthetase	Aglycines
+Glyma.19G192600	description	PTHR21470 - NTKL-BINDING PROTEIN 1	Aglycines
+Glyma.19G200700	description	K11294 - nucleolin (NCL, NSR1)	Aglycines
+Glyma.19G223600	description	PTHR24031:SF155 - DEAD-BOX ATP-DEPENDENT RNA HELICASE 3, CHLOROPLASTIC	Aglycines
+Glyma.19G232300	description	PTHR11668:SF262 - SERINE/THREONINE-PROTEIN PHOSPHATASE PP1 ISOZYME 8-RELATED	Aglycines
+Glyma.20G104700	description	KOG2985 - Uncharacterized conserved protein	Aglycines
+Glyma.20G116100	description	PTHR12934//PTHR12934:SF11 - 50S RIBOSOMAL PROTEIN L15 // 50S RIBOSOMAL PROTEIN L15, CHLOROPLASTIC	Aglycines
+Glyma.20G142800	description	PTHR24089:SF282 - PEROXISOMAL ADENINE NUCLEOTIDE CARRIER 1-RELATED	Aglycines
+Glyma.20G143900	description	PTHR24096:SF221 - PROTEIN ACS-13, ISOFORM C	Aglycines
+Glyma.20G144700	description	K02692 - photosystem I subunit II (psaD)	Aglycines
+Glyma.05G194700	description	PF12527 - Protein of unknown function (DUF3727) (DUF3727)	Situra
+Glyma.06G175400	description	K11294 - nucleolin (NCL, NSR1)	Situra
+Glyma.06G195300	description	KOG3292 - Predicted membrane protein	Situra
+Glyma.07G033100	description	K03301 - ATP:ADP antiporter, AAA family (TC.AAA)	Situra
+Glyma.07G034400	description	PF13964 - Kelch motif (Kelch_6)	Situra
+Glyma.07G036400	description	K00679 - phospholipid:diacylglycerol acyltransferase (E2.3.1.158)	Situra
+Glyma.12G059900	description	PTHR23500//PTHR23500:SF159 - FAMILY NOT NAMED // D-XYLOSE-PROTON SYMPORTER-LIKE 3, CHLOROPLASTIC	Situra
