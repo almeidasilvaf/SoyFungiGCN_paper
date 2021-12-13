@@ -108,6 +108,62 @@ venn.diagram(
 )
 ```
 
+## Comparing to fungi resistance-related genes
+
+```{r}
+cgregata <- paste0(tempdir(), "/cgregata.rda")
+download.file("https://github.com/almeidasilvaf/SoyFungi_GWAS_GCN/blob/main/products/result_files/cgregata_minedcand.rda?raw=true", destfile = cgregata)
+
+fgraminearum <- paste0(tempdir(), "/fgraminearum.rda")
+download.file("https://github.com/almeidasilvaf/SoyFungi_GWAS_GCN/blob/main/products/result_files/fgraminearum_minedcand.rda?raw=true", destfile = fgraminearum)
+
+fvirguliforme <- paste0(tempdir(), "/fvirguliforme.rda")
+download.file("https://github.com/almeidasilvaf/SoyFungi_GWAS_GCN/blob/main/products/result_files/fvirguliforme_minedcand.rda?raw=true", destfile = fvirguliforme)
+
+mphaseolina <- paste0(tempdir(), "/mphaseolina.rda")
+download.file("https://github.com/almeidasilvaf/SoyFungi_GWAS_GCN/blob/main/products/result_files/mphaseolina_minedcand.rda?raw=true", destfile = mphaseolina)
+
+ppachyrhizi <- paste0(tempdir(), "/ppachyrhizi.rda")
+download.file("https://github.com/almeidasilvaf/SoyFungi_GWAS_GCN/blob/main/products/result_files/ppachyrhizi_minedcand.rda?raw=true", destfile = ppachyrhizi)
+
+
+load(cgregata)
+load(fgraminearum)
+load(fvirguliforme)
+load(mphaseolina)
+load(ppachyrhizi)
+
+venn_pdata_comp <- list(
+  Aglycines = unique(mining_aglycines$gene),
+  Slitura = unique(mining_slitura$gene),
+  Hglycines = unique(mining_hglycines$gene),
+  Cgregata = unique(mining_cgregata$gene),
+  Fgraminearum = unique(mining_fgraminearum$gene),
+  Fvirguliforme = unique(mining_fvirguliforme$gene),
+  Mphaseolina = unique(mining_mphaseolina$gene),
+  Ppachyrhizi = unique(mining_ppachyrhizi$gene)
+)
+
+# Plot venn diagram using the VennDiagram package
+library(ComplexHeatmap)
+upset_matrix <- make_comb_mat(list_to_matrix(venn_pdata_comp))
+
+ht <- draw(
+  UpSet(
+    upset_matrix,
+    set_order = c("Hglycines", "Aglycines", "Slitura",
+                  "Fvirguliforme", "Fgraminearum", "Cgregata",
+                  "Mphaseolina", "Ppachyrhizi")
+  )
+)
+od <- column_order(ht)
+cs <- comb_size(upset_matrix)
+decorate_annotation("intersection_size", {
+    grid.text(cs[od], x = seq_along(cs), y = unit(cs[od], "native") + unit(2, "pt"), 
+        default.units = "native", just = "bottom", gp = gpar(fontsize = 8))
+})
+# Saved as PDF, 6 x 5 inches
+```
 
 ## Session information
 
