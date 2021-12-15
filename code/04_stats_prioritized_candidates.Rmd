@@ -42,8 +42,7 @@ p_cand <- ggplot(freq_cand) +
   ggplot2::scale_fill_manual(values = cpal) +
   facet_wrap(~variable, ncol=5) +
   theme_bw() +
-  labs(x="Relative frequency", y="",
-       title="Immunity-related classification of candidate resistance genes per species")
+  labs(x="Relative frequency", y="")
 
 ggsave(filename = here("products", "plots", "candidates_classification.png"),
        p_cand, width = 9, height=3)
@@ -79,7 +78,7 @@ venn_pdata <- list(
 library(VennDiagram)
 venn.diagram(
         x = venn_pdata,
-        category.names = c("A. glycines" , "S. litura", "H. glycines"),
+        category.names = c("A. glycines", "S. litura", "H. glycines"),
         filename = here("products", "plots", "venn_diagram_candidates.png"),
         output=TRUE,
         
@@ -92,7 +91,7 @@ venn.diagram(
         # Circles
         lwd = 2,
         lty = 'blank',
-        fill = cpal,
+        fill = c("darkgoldenrod3", "darkgreen", "dimgrey"),
         
         # Numbers
         cex = 0.5,
