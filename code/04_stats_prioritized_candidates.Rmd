@@ -22,27 +22,28 @@ library(tidyverse)
 library(here)
 cpal <- c("darkgoldenrod3", "dimgrey", "darkgreen")
 
-all_cand_des <- read.csv(here("products", "tables",
-                              "all_mined_candidates_and_description.txt"),
-                         header=TRUE, sep="\t")
+all_cand_des <- read.csv(
+    here("products", "tables", "all_mined_candidates_and_description.txt"),
+    header = TRUE, sep = "\t"
+)
 
 freq_abs_cand <- all_cand_des %>%
-  janitor::tabyl(Role, Species) %>%
-  mutate(Role = stringr::str_replace_all(Role, "SM metabolism", 
-                                         "Specialized metabolism")) %>%
-  reshape2::melt()
+    janitor::tabyl(Role, Species) %>%
+    mutate(Role = stringr::str_replace_all(Role, "SM metabolism", 
+                                           "Specialized metabolism")) %>%
+    reshape2::melt()
 
 freq_cand <- freq_abs_cand %>%
-  group_by(variable) %>%
-  mutate(percentage = value / sum(value))
+    group_by(variable) %>%
+    mutate(percentage = value / sum(value))
 
 p_cand <- ggplot(freq_cand) +
-  geom_bar(aes(x=percentage, y=Role, fill = variable), stat="identity",
-           show.legend=FALSE) +
-  ggplot2::scale_fill_manual(values = cpal) +
-  facet_wrap(~variable, ncol=5) +
-  theme_bw() +
-  labs(x="Relative frequency", y="")
+    geom_bar(aes(x=percentage, y=Role, fill = variable), stat="identity",
+             show.legend=FALSE) +
+    ggplot2::scale_fill_manual(values = cpal) +
+    facet_wrap(~variable, ncol=5) +
+    theme_bw() +
+    labs(x="Relative frequency", y="")
 
 ggsave(filename = here("products", "plots", "candidates_classification.png"),
        p_cand, width = 9, height=3)
@@ -55,8 +56,10 @@ f2 <- magick::image_read(here("products", "plots", "candidates_classification.pn
 
 final_fig <- image_append(c(image_scale(f1, "2700x2020!"), f2), 
                           stack=TRUE)
-magick::image_write(final_fig, 
-                    path = here("products", "plots", "candidates_classification_final.png"))
+magick::image_write(
+    final_fig, 
+    path = here("products", "plots", "candidates_classification_final.png")
+)
 ```
 
 Show candidates in a Venn Diagram.
@@ -163,6 +166,239 @@ decorate_annotation("intersection_size", {
 })
 # Saved as PDF, 6 x 5 inches
 ```
+
+## Comparing to previous studies
+
+To conclude, we will compare the high-confidence candidate genes we found
+with potential resistance genes identified in previous studies.
+
+First, let's manually identify each gene and their respective
+studies and look for matches between reported genes and our list of prioritized
+candidates.
+
+```{r known_resistance_genes}
+# H. glycines
+## Important loci
+rhg1 <- c(
+    "Glyma.18G022400", "Glyma.18G022500", "Glyma.18G022600", "Glyma.18G022700"
+)
+
+rhg4 <- "Glyma.08G107700"
+sum(c(rhg1, rhg4) %in% all_cand_des$Gene)
+
+## Loci reported in previous GWAS papers
+liu_2019 <- c(
+    "Glyma.09G054000", "Glyma.16G065700", "Glyma.18G192200"
+)
+
+zhang_2017 <- c(
+    "Glyma.08G108900", "Glyma.08G303900", "Glyma.11G151500",
+    "Glyma.13G175200", "Glyma.17G010200", "Glyma.18G022700",
+    "Glyma.18G95000"
+)
+
+chang_2016 <- c(
+    "Glyma.18g023500", "Glyma.20g193500"
+)
+
+vuong_2015 <- c(
+    NA
+)
+
+zhao_2017 <- c(
+    "Glyma.07G195400", "Glyma.07G196000", "Glyma.08G100100", 
+    "Glyma.18G193200", "Glyma.18G193300", "Glyma.18G193400",
+    "Glyma.07G190900", "Glyma.07G191000", "Glyma.07G191100",
+    "Glyma.07G191200", "Glyma.07G191500", "Glyma.07G195500",
+    "Glyma.08G099400", "Glyma.08G099700", "Glyma.08G100700",
+    "Glyma.08G100800", "Glyma.08G200800", "Glyma.08G200800",
+    "Glyma.08G201000", "Glyma.08G201100", "Glyma.14G048600",
+    "Glyma.14G049500"
+)
+
+tran_2019 <- c(
+    "Glyma.07g194200", "Glyma.07g194400", "Glyma.07g194800",
+    "Glyma.07g195000", "Glyma.07g195100", "Glyma.07g195300",
+    "Glyma.07g195400", "Glyma.07g195500", "Glyma.07g195700",
+    "Glyma.07g195900", "Glyma.07g196000", "Glyma.07g196500",
+    "Glyma.07g199000", "Glyma.07g200100", "Glyma.07g199500",
+    "Glyma.07g199700", "Glyma.07g199900", "Glyma.10g172700",
+    "Glyma.10g172800", "Glyma.10g172900", "Glyma.10g173000",
+    "Glyma.10g173100", "Glyma.10g173300", "Glyma.10g173400"
+)
+
+bao_2014 <- c(
+    "Glyma.18g227700"
+)
+
+sum(all_cand_des$Gene %in% c(
+    bao_2014, tran_2019, zhao_2017, vuong_2015, chang_2016, zhang_2017, liu_2019
+))
+
+# S. litura
+liu_2016 <- c(
+    "Glyma.07g051500", "Glyma.07g055200", "Glyma.06g189600", "Glyma.06g190800"
+)
+
+sum(all_cand_des$Gene %in% c(
+    liu_2016
+))
+
+# A. glycines
+natukunda_2019 <- c(
+    "Glyma.12G075100", "Glyma.10G015900", "Glyma.10G297600"
+)
+
+chang_hartman_2017 <- c(
+    "Glyma.07G117400", "Glyma.07G108200", "Glyma.07G108400",
+    "Glyma.07G110700"
+)
+
+hanson_2018 <- c(
+    NA
+)
+
+sum(all_cand_des$Gene %in% c(
+    natukunda_2019, chang_hartman_2017, hanson_2018
+))
+
+all_cand_des |>
+    filter(Gene %in% c(natukunda_2019, chang_hartman_2017, hanson_2018))
+```
+
+Only 1 prioritized gene for resistance to *A. glycines* has been previously
+reported (Glyma.07G117400, Hartman et al., 2017). This gene encodes
+a leucine-rich repeat receptor kinase (LRR-RK), a receptor that is typically
+involved in the recognition of non-self molecular patterns.
+
+For *H. glycines*, we identified one gene (Glyma.18G022400) from the Rhg1 locus,
+which is known to confer resistance to cyst nematodes not only in soybean,
+but also in other plant species (Cook et al., 2012; Butler et al., 2019).
+
+Finally, we will look for prioritized candidate genes that are in known
+QTL regions identified by biparental crossing and QTL mapping. For that, we will
+extract known QTL for each trait from SoyBase.
+
+```{r}
+library(rvest)
+
+# Define function to obtain QTL IDs for a trait
+get_QTL_list_from_soybase <- function(qtl_url) {
+    
+    qtl_df <- read_html(
+        qtl_url
+    ) |>
+        html_table() |>
+        pluck(2)
+    
+    return(qtl_df)
+}
+
+# Define function to extract QTL coordinates from QTL IDs
+get_QTL_coordinates <- function(QTL_id) {
+    
+    # Read HTML page and extract text with positions of nearest markers
+    url <- paste0(
+        "https://www.soybase.org/SeqMapSearch/GbrowseSearch/SeqGenSearch4.php?qtlname=",
+        gsub(" ", "%20", QTL_id)
+    )
+    
+    page <- read_html(url) |>
+        html_elements(".sb_main") |>
+        html_elements(xpath = "/html/body/div[3]/div/text()") |>
+        html_text2() 
+    
+    # Extract text with pattern "GmX:NNN"
+    fpage <- page[grepl("position", page)]
+    positions <- gsub(".*position: ", "", fpage)
+    
+    # Get chromosome number, start, and end positions
+    chr <- unique(gsub(":.*", "", positions))
+    
+    coords <- NULL
+    if(length(chr) > 0) {
+        position_number <- sort(as.numeric(gsub(".*:", "", positions)))
+        start <- position_number[1]
+        end <- position_number[2]
+        
+        coords <- data.frame(seqnames = chr, start = start, end = end)
+    } 
+    
+    return(coords)
+}
+
+# Get QTL coordinates for each trait
+## H. glycines (SCN)
+qtl_ids_scn <- get_QTL_list_from_soybase(
+    "https://www.soybase.org/search/index.php?searchterm=SCN&list=bi_parental_qtl_listview"
+)
+qtl_ids_scn <- qtl_ids_scn[, 3, drop = TRUE]
+qtl_ids_scn <- qtl_ids_scn[startsWith(qtl_ids_scn, "SCN ")]
+
+qtl_coord_scn <- Reduce(rbind, lapply(qtl_ids_scn, get_QTL_coordinates)) |>
+    mutate(seqnames = str_replace_all(seqnames, "Gm", "Chr"))
+
+## S. litura (common cutworm)
+qtl_ids_sli <- paste("Common cutworm", c(
+    "1-1", "1-2", "2-1", "2-2"
+))
+qtl_coord_sli <- Reduce(rbind, lapply(qtl_ids_sli, get_QTL_coordinates)) |>
+    mutate(seqnames = str_replace_all(seqnames, "Gm", "Chr"))
+
+## A. glycines (soybean aphid)
+qtl_ids_agly <- paste("Rag", c(
+    "2-1", "2-2", "3-1", "3-2", "4-1", "4-2", "4-3"
+))
+qtl_coord_agly <- Reduce(rbind, lapply(qtl_ids_agly, get_QTL_coordinates)) |>
+    mutate(seqnames = str_replace_all(seqnames, "Gm", "Chr"))
+
+# Look for prioritized candidates in QTL regions
+library(plyranges)
+
+gene_ranges <- rtracklayer::import(
+    here("data", "PLAZA_selected.transcripts.gff.gz")
+) |>
+    filter(type == "gene") |>
+    select(gene_id)
+
+## H. glycines
+prioritized_genes_in_qtls_scn <- gene_ranges |>
+    filter(gene_id %in% all_cand_des[all_cand_des$Species == "Hglycines", "Gene"]) |>
+    join_overlap_intersect(as_granges(qtl_coord_scn)) |>
+    as.data.frame() |>
+    dplyr::pull(gene_id) |>
+    unique()
+
+length(prioritized_genes_in_qtls_scn)
+
+## S. litura
+prioritized_genes_in_qtls_sli <- gene_ranges |>
+    filter(gene_id %in% all_cand_des[all_cand_des$Species == "Slitura", "Gene"]) |>
+    join_overlap_intersect(as_granges(qtl_coord_sli)) |>
+    as.data.frame() |>
+    dplyr::pull(gene_id) |>
+    unique()
+
+length(prioritized_genes_in_qtls_sli)
+
+## A. glycines
+prioritized_genes_in_qtls_agly <- gene_ranges |>
+    filter(gene_id %in% all_cand_des[all_cand_des$Species == "Aglycines", "Gene"]) |>
+    join_overlap_intersect(as_granges(qtl_coord_agly)) |>
+    as.data.frame() |>
+    dplyr::pull(gene_id) |>
+    unique()
+
+length(prioritized_genes_in_qtls_agly)
+```
+
+The results per species are as follows:
+
+- *H. glycines* (SCN): 41% (80/194) of prioritized genes in known QTLs.
+- *S. litura*: 0% (0/7) of the prioritized genes in known QTLs.
+- *A. glycines* (soybean aphid): 4% (6/171) of the prioritized genes in known QTLs.
+
+QTLs were obtained from biparental mapping.
 
 ## Session information
 
